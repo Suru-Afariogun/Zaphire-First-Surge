@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: f381bef41883b674ca8f022b734b0280
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2701607634072383038
+    second: Zaphire mini sprite sheet updated with 3 more sprites_0
+  - first:
+      213: -2439201272494928262
+    second: Zaphire mini sprite sheet updated with 3 more sprites_1
+  - first:
+      213: 7778057289478954733
+    second: Zaphire mini sprite sheet updated with 3 more sprites_2
+  - first:
+      213: -4043847346707389918
+    second: Zaphire mini sprite sheet updated with 3 more sprites_3
+  - first:
+      213: -5670755979965332287
+    second: Zaphire mini sprite sheet updated with 3 more sprites_4
+  - first:
+      213: -6117238454916892887
+    second: Zaphire mini sprite sheet updated with 3 more sprites_5
+  - first:
+      213: 8360484489536468387
+    second: Zaphire mini sprite sheet updated with 3 more sprites_6
+  - first:
+      213: 7860513167713125653
+    second: Zaphire mini sprite sheet updated with 3 more sprites_7
+  - first:
+      213: -6743475835921508221
+    second: Zaphire mini sprite sheet updated with 3 more sprites_8
+  - first:
+      213: -7101963464585197309
+    second: Zaphire mini sprite sheet updated with 3 more sprites_9
+  - first:
+      213: -2161908967876750345
+    second: Zaphire mini sprite sheet updated with 3 more sprites_10
+  - first:
+      213: -7552879924029569352
+    second: Zaphire mini sprite sheet updated with 3 more sprites_11
+  - first:
+      213: 3759004409361938739
+    second: Zaphire mini sprite sheet updated with 3 more sprites_12
+  - first:
+      213: 4921527604844661914
+    second: Zaphire mini sprite sheet updated with 3 more sprites_13
+  - first:
+      213: -8734100902574131063
+    second: Zaphire mini sprite sheet updated with 3 more sprites_14
+  - first:
+      213: 3525011686689051161
+    second: Zaphire mini sprite sheet updated with 3 more sprites_15
+  - first:
+      213: 5249671111613546337
+    second: Zaphire mini sprite sheet updated with 3 more sprites_16
+  - first:
+      213: -2924698737169381092
+    second: Zaphire mini sprite sheet updated with 3 more sprites_17
+  - first:
+      213: 6658857878472822951
+    second: Zaphire mini sprite sheet updated with 3 more sprites_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2092
+        width: 343
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1d1a8ab26f18ad0800000000000000
+      internalID: -2701607634072383038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_1
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 2094
+        width: 278
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e4249bd57362ed0800000000000000
+      internalID: -2439201272494928262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_2
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 2102
+        width: 408
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deed70615e531fb60800000000000000
+      internalID: 7778057289478954733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_3
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 2127
+        width: 326
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222a99d634e51e7c0800000000000000
+      internalID: -4043847346707389918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1600
+        width: 382
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c48e3e2b7d6d41b0800000000000000
+      internalID: -5670755979965332287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_5
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1613
+        width: 496
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 927b15829043b1ba0800000000000000
+      internalID: -6117238454916892887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_6
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1612
+        width: 484
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a5fbf4f858660470800000000000000
+      internalID: 8360484489536468387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_7
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1110
+        width: 360
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51542d94417261d60800000000000000
+      internalID: 7860513167713125653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_8
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1138
+        width: 350
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 388d778a47c5a62a0800000000000000
+      internalID: -6743475835921508221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_9
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1133
+        width: 402
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309c8955bd1c07d90800000000000000
+      internalID: -7101963464585197309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_10
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1140
+        width: 402
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f399fc7f3b5ff1e0800000000000000
+      internalID: -2161908967876750345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 735
+        width: 380
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6c909d9b7ce2790800000000000000
+      internalID: -7552879924029569352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_12
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 745
+        width: 370
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3393521289aaa2430800000000000000
+      internalID: 3759004409361938739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_13
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 740
+        width: 400
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c8b0ff747cc4440800000000000000
+      internalID: 4921527604844661914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_14
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 748
+        width: 371
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98876ad118d3ac680800000000000000
+      internalID: -8734100902574131063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_15
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 101
+        width: 429
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9129336e37b5be030800000000000000
+      internalID: 3525011686689051161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_16
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 105
+        width: 382
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ffa53ef049ad840800000000000000
+      internalID: 5249671111613546337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_17
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 99
+        width: 429
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c194cf78ef16967d0800000000000000
+      internalID: -2924698737169381092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini sprite sheet updated with 3 more sprites_18
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 100
+        width: 429
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a01f28d5f3096c50800000000000000
+      internalID: 6658857878472822951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Zaphire mini sprite sheet updated with 3 more sprites_0: -2701607634072383038
+      Zaphire mini sprite sheet updated with 3 more sprites_1: -2439201272494928262
+      Zaphire mini sprite sheet updated with 3 more sprites_10: -2161908967876750345
+      Zaphire mini sprite sheet updated with 3 more sprites_11: -7552879924029569352
+      Zaphire mini sprite sheet updated with 3 more sprites_12: 3759004409361938739
+      Zaphire mini sprite sheet updated with 3 more sprites_13: 4921527604844661914
+      Zaphire mini sprite sheet updated with 3 more sprites_14: -8734100902574131063
+      Zaphire mini sprite sheet updated with 3 more sprites_15: 3525011686689051161
+      Zaphire mini sprite sheet updated with 3 more sprites_16: 5249671111613546337
+      Zaphire mini sprite sheet updated with 3 more sprites_17: -2924698737169381092
+      Zaphire mini sprite sheet updated with 3 more sprites_18: 6658857878472822951
+      Zaphire mini sprite sheet updated with 3 more sprites_2: 7778057289478954733
+      Zaphire mini sprite sheet updated with 3 more sprites_3: -4043847346707389918
+      Zaphire mini sprite sheet updated with 3 more sprites_4: -5670755979965332287
+      Zaphire mini sprite sheet updated with 3 more sprites_5: -6117238454916892887
+      Zaphire mini sprite sheet updated with 3 more sprites_6: 8360484489536468387
+      Zaphire mini sprite sheet updated with 3 more sprites_7: 7860513167713125653
+      Zaphire mini sprite sheet updated with 3 more sprites_8: -6743475835921508221
+      Zaphire mini sprite sheet updated with 3 more sprites_9: -7101963464585197309
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

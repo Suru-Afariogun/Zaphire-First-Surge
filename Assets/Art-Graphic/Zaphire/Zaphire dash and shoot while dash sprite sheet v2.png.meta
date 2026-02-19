@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 68dccf886f3f5c247b6ab6c1055eba43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6522323724853651180
+    second: Zaphire dash and shoot while dash sprite sheet v2_0
+  - first:
+      213: -5010687398808643896
+    second: Zaphire dash and shoot while dash sprite sheet v2_1
+  - first:
+      213: 3295465720405804243
+    second: Zaphire dash and shoot while dash sprite sheet v2_2
+  - first:
+      213: 4932611286723268246
+    second: Zaphire dash and shoot while dash sprite sheet v2_3
+  - first:
+      213: -909649139749928394
+    second: Zaphire dash and shoot while dash sprite sheet v2_4
+  - first:
+      213: -6542642742010961126
+    second: Zaphire dash and shoot while dash sprite sheet v2_5
+  - first:
+      213: -4397407641212047511
+    second: Zaphire dash and shoot while dash sprite sheet v2_6
+  - first:
+      213: 9174746763801539027
+    second: Zaphire dash and shoot while dash sprite sheet v2_7
+  - first:
+      213: -7270650740816904466
+    second: Zaphire dash and shoot while dash sprite sheet v2_8
+  - first:
+      213: -61759694835724964
+    second: Zaphire dash and shoot while dash sprite sheet v2_9
+  - first:
+      213: -5140073844271384286
+    second: Zaphire dash and shoot while dash sprite sheet v2_10
+  - first:
+      213: 3285324987855983493
+    second: Zaphire dash and shoot while dash sprite sheet v2_11
+  - first:
+      213: 688543832731593906
+    second: Zaphire dash and shoot while dash sprite sheet v2_12
+  - first:
+      213: -1690116304901560463
+    second: Zaphire dash and shoot while dash sprite sheet v2_13
+  - first:
+      213: -5585987980561682617
+    second: Zaphire dash and shoot while dash sprite sheet v2_14
+  - first:
+      213: 293206986816578203
+    second: Zaphire dash and shoot while dash sprite sheet v2_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_0
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2252
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6210afed2f38a50800000000000000
+      internalID: 6522323724853651180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_1
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 2259
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c61c79cb56767ab0800000000000000
+      internalID: -5010687398808643896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1895
+        width: 778
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4c342dc98dbbd20800000000000000
+      internalID: 3295465720405804243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_3
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1899
+        width: 799
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e0938c4d7247440800000000000000
+      internalID: 4932611286723268246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1369
+        width: 762
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63247fa4de64063f0800000000000000
+      internalID: -909649139749928394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_5
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1381
+        width: 669
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13262e271dd335a0800000000000000
+      internalID: -6542642742010961126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_6
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1542
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96fa7fc7c0549f2c0800000000000000
+      internalID: -4397407641212047511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_7
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 1537
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d13e80629f335f70800000000000000
+      internalID: 9174746763801539027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_8
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1380
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee7dab3ca5791b90800000000000000
+      internalID: -7270650740816904466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1118
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d41ef72e5942ff0800000000000000
+      internalID: -61759694835724964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_10
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1124
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2297de8621acaa8b0800000000000000
+      internalID: -5140073844271384286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_11
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 763
+        width: 842
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583ded88ba1d79d20800000000000000
+      internalID: 3285324987855983493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_12
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 673
+        width: 564
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bca042c7f23e8900800000000000000
+      internalID: 688543832731593906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_13
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 96
+        width: 872
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1772f31ec208b88e0800000000000000
+      internalID: -1690116304901560463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_14
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 228
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fe40b07859a72b0800000000000000
+      internalID: -5585987980561682617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire dash and shoot while dash sprite sheet v2_15
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 207
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b926dd6733ea11400800000000000000
+      internalID: 293206986816578203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Zaphire dash and shoot while dash sprite sheet v2_0: 6522323724853651180
+      Zaphire dash and shoot while dash sprite sheet v2_1: -5010687398808643896
+      Zaphire dash and shoot while dash sprite sheet v2_10: -5140073844271384286
+      Zaphire dash and shoot while dash sprite sheet v2_11: 3285324987855983493
+      Zaphire dash and shoot while dash sprite sheet v2_12: 688543832731593906
+      Zaphire dash and shoot while dash sprite sheet v2_13: -1690116304901560463
+      Zaphire dash and shoot while dash sprite sheet v2_14: -5585987980561682617
+      Zaphire dash and shoot while dash sprite sheet v2_15: 293206986816578203
+      Zaphire dash and shoot while dash sprite sheet v2_2: 3295465720405804243
+      Zaphire dash and shoot while dash sprite sheet v2_3: 4932611286723268246
+      Zaphire dash and shoot while dash sprite sheet v2_4: -909649139749928394
+      Zaphire dash and shoot while dash sprite sheet v2_5: -6542642742010961126
+      Zaphire dash and shoot while dash sprite sheet v2_6: -4397407641212047511
+      Zaphire dash and shoot while dash sprite sheet v2_7: 9174746763801539027
+      Zaphire dash and shoot while dash sprite sheet v2_8: -7270650740816904466
+      Zaphire dash and shoot while dash sprite sheet v2_9: -61759694835724964
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

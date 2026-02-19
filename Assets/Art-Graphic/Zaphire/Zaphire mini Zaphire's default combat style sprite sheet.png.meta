@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 25441ccbf894b1949ba687e6c7e3d5e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6001638471055392946
+    second: Zaphire mini Zaphire's default combat style sprite sheet_0
+  - first:
+      213: -5434388737278276511
+    second: Zaphire mini Zaphire's default combat style sprite sheet_1
+  - first:
+      213: 294027151923058572
+    second: Zaphire mini Zaphire's default combat style sprite sheet_2
+  - first:
+      213: -2559665335795958725
+    second: Zaphire mini Zaphire's default combat style sprite sheet_3
+  - first:
+      213: 719986824319142341
+    second: Zaphire mini Zaphire's default combat style sprite sheet_4
+  - first:
+      213: -813783201909348703
+    second: Zaphire mini Zaphire's default combat style sprite sheet_5
+  - first:
+      213: 6172819171184852130
+    second: Zaphire mini Zaphire's default combat style sprite sheet_6
+  - first:
+      213: 8513761560385247003
+    second: Zaphire mini Zaphire's default combat style sprite sheet_7
+  - first:
+      213: -6556842095627786282
+    second: Zaphire mini Zaphire's default combat style sprite sheet_8
+  - first:
+      213: 7810625343948890276
+    second: Zaphire mini Zaphire's default combat style sprite sheet_9
+  - first:
+      213: -2250846959163999718
+    second: Zaphire mini Zaphire's default combat style sprite sheet_10
+  - first:
+      213: 3598879953826728267
+    second: Zaphire mini Zaphire's default combat style sprite sheet_11
+  - first:
+      213: 6650192905301674001
+    second: Zaphire mini Zaphire's default combat style sprite sheet_12
+  - first:
+      213: -2236592242969670771
+    second: Zaphire mini Zaphire's default combat style sprite sheet_13
+  - first:
+      213: -1333971187518410250
+    second: Zaphire mini Zaphire's default combat style sprite sheet_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2044
+        width: 343
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fbc6ecb95e5bca0800000000000000
+      internalID: -6001638471055392946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 2053
+        width: 278
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c052f6c3c2594b0800000000000000
+      internalID: -5434388737278276511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 2044
+        width: 408
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8791b80328941400800000000000000
+      internalID: 294027151923058572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1515
+        width: 450
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c300450fd3a7cd0800000000000000
+      internalID: -2559665335795958725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1506
+        width: 438
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9018ab338edf900800000000000000
+      internalID: 719986824319142341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 1479
+        width: 382
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a6630e4d7cd4b4f0800000000000000
+      internalID: -813783201909348703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 981
+        width: 360
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2acb139c4524aa550800000000000000
+      internalID: 6172819171184852130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1000
+        width: 402
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1753250805f62670800000000000000
+      internalID: 8513761560385247003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1018
+        width: 402
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d727c98ada6105a0800000000000000
+      internalID: -6556842095627786282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 536
+        width: 380
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0acbb2e5ae46c60800000000000000
+      internalID: 7810625343948890276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 472
+        width: 380
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1af24bbd9263c0e0800000000000000
+      internalID: -2250846959163999718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 493
+        width: 402
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49cd15104ac1f130800000000000000
+      internalID: 3598879953826728267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 23
+        width: 326
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1184450963b3a4c50800000000000000
+      internalID: 6650192905301674001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 131
+        width: 371
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b066a743706f0e0800000000000000
+      internalID: -2236592242969670771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire mini Zaphire's default combat style sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 65
+        width: 350
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f1fb5bc548cc7de0800000000000000
+      internalID: -1333971187518410250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Zaphire mini Zaphire's default combat style sprite sheet_0: -6001638471055392946
+      Zaphire mini Zaphire's default combat style sprite sheet_1: -5434388737278276511
+      Zaphire mini Zaphire's default combat style sprite sheet_10: -2250846959163999718
+      Zaphire mini Zaphire's default combat style sprite sheet_11: 3598879953826728267
+      Zaphire mini Zaphire's default combat style sprite sheet_12: 6650192905301674001
+      Zaphire mini Zaphire's default combat style sprite sheet_13: -2236592242969670771
+      Zaphire mini Zaphire's default combat style sprite sheet_14: -1333971187518410250
+      Zaphire mini Zaphire's default combat style sprite sheet_2: 294027151923058572
+      Zaphire mini Zaphire's default combat style sprite sheet_3: -2559665335795958725
+      Zaphire mini Zaphire's default combat style sprite sheet_4: 719986824319142341
+      Zaphire mini Zaphire's default combat style sprite sheet_5: -813783201909348703
+      Zaphire mini Zaphire's default combat style sprite sheet_6: 6172819171184852130
+      Zaphire mini Zaphire's default combat style sprite sheet_7: 8513761560385247003
+      Zaphire mini Zaphire's default combat style sprite sheet_8: -6556842095627786282
+      Zaphire mini Zaphire's default combat style sprite sheet_9: 7810625343948890276
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

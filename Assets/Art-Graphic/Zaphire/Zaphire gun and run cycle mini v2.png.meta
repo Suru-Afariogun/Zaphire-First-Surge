@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 318296ada61c0b1438ae390f23d4ea89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5257387862295250616
+    second: Zaphire gun and run cycle mini v2_0
+  - first:
+      213: 2526900878350668413
+    second: Zaphire gun and run cycle mini v2_1
+  - first:
+      213: 5636497566580155199
+    second: Zaphire gun and run cycle mini v2_2
+  - first:
+      213: 6374604935797735779
+    second: Zaphire gun and run cycle mini v2_3
+  - first:
+      213: 2479825206005669818
+    second: Zaphire gun and run cycle mini v2_4
+  - first:
+      213: 6962256038199936105
+    second: Zaphire gun and run cycle mini v2_5
+  - first:
+      213: 7737333540277860389
+    second: Zaphire gun and run cycle mini v2_6
+  - first:
+      213: 2183752025168679532
+    second: Zaphire gun and run cycle mini v2_7
+  - first:
+      213: 6437905208865075208
+    second: Zaphire gun and run cycle mini v2_8
+  - first:
+      213: 7875434253678909666
+    second: Zaphire gun and run cycle mini v2_9
+  - first:
+      213: 6255503088153523483
+    second: Zaphire gun and run cycle mini v2_10
+  - first:
+      213: 410985481332412875
+    second: Zaphire gun and run cycle mini v2_11
+  - first:
+      213: 6291477945520729334
+    second: Zaphire gun and run cycle mini v2_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_0
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1895
+        width: 350
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b60f8ae76ef5f840800000000000000
+      internalID: 5257387862295250616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_1
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1895
+        width: 350
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72d6b4f5fa511320800000000000000
+      internalID: 2526900878350668413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_2
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1898
+        width: 350
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f332d516cacd83e40800000000000000
+      internalID: 5636497566580155199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_3
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1384
+        width: 424
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3610dad3a65277850800000000000000
+      internalID: 6374604935797735779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_4
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1382
+        width: 414
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf170dd2eb1a6220800000000000000
+      internalID: 2479825206005669818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_5
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 1368
+        width: 423
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964c938aaf6ee9060800000000000000
+      internalID: 6962256038199936105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 833
+        width: 417
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5283af85cd7806b60800000000000000
+      internalID: 7737333540277860389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_7
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 857
+        width: 444
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6218b995ee3e4e10800000000000000
+      internalID: 2183752025168679532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_8
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 863
+        width: 412
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8003a009da8085950800000000000000
+      internalID: 6437905208865075208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 315
+        width: 417
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e899765ab92b4d60800000000000000
+      internalID: 7875434253678909666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_10
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 327
+        width: 418
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15ffb46ae200d650800000000000000
+      internalID: 6255503088153523483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_11
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 340
+        width: 415
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc159a62e1d14b500800000000000000
+      internalID: 410985481332412875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire gun and run cycle mini v2_12
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 356
+        width: 417
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fca7f69bd1df4750800000000000000
+      internalID: 6291477945520729334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Zaphire gun and run cycle mini v2_0: 5257387862295250616
+      Zaphire gun and run cycle mini v2_1: 2526900878350668413
+      Zaphire gun and run cycle mini v2_10: 6255503088153523483
+      Zaphire gun and run cycle mini v2_11: 410985481332412875
+      Zaphire gun and run cycle mini v2_12: 6291477945520729334
+      Zaphire gun and run cycle mini v2_2: 5636497566580155199
+      Zaphire gun and run cycle mini v2_3: 6374604935797735779
+      Zaphire gun and run cycle mini v2_4: 2479825206005669818
+      Zaphire gun and run cycle mini v2_5: 6962256038199936105
+      Zaphire gun and run cycle mini v2_6: 7737333540277860389
+      Zaphire gun and run cycle mini v2_7: 2183752025168679532
+      Zaphire gun and run cycle mini v2_8: 6437905208865075208
+      Zaphire gun and run cycle mini v2_9: 7875434253678909666
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
