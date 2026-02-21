@@ -19,6 +19,13 @@ public class PlayerSpawner : MonoBehaviour
 
     void Start()
     {
+        // Check if GameManager exists
+        if (GameManager.Instance == null)
+        {
+            Debug.LogError("GameManager.Instance is null! Make sure a GameManager GameObject exists in the scene.");
+            return;
+        }
+
         GameObject prefab = GameManager.Instance.GetSelectedCombatStylePrefab();
 
         if (prefab != null)
@@ -27,7 +34,7 @@ public class PlayerSpawner : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No combat style prefab found to spawn!");
+            Debug.LogError("No combat style prefab found to spawn! Check GameManager's CombatStylePrefabs array.");
         }
     }
 }

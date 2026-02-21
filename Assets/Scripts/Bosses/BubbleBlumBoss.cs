@@ -452,8 +452,14 @@ public class BubbleBlumBoss : MonoBehaviour
 
     void Die()
     {
-        // intentionally NOT calling Die animation until you provide the clip
-        // if (anim != null) anim.SetTrigger("Die");
+        // Record that this boss was beaten so the save slot can show their profile as beaten (darker)
+        if (GameManager.Instance != null)
+        {
+            string bossName = !string.IsNullOrEmpty(GameManager.Instance.selectedBoss)
+                ? GameManager.Instance.selectedBoss
+                : "BubbleBlum";
+            GameManager.Instance.RecordBossDefeated(bossName);
+        }
         rb.linearVelocity = Vector2.zero;
         Debug.Log("Boss died!");
         Destroy(gameObject, 1f);

@@ -15,13 +15,13 @@ public class BossSelectUI : MonoBehaviour
             GameManager.Instance.SetDefaultCombatStyle();
         }
 
-        // Save the current scene before loading the boss fight
-        // This allows the player to continue from the boss fight later
+        // Save the current scene before loading the boss fight so continue-from-save works
         string bossFightScene = "BubbleBlumBossFight";
         GameManager.Instance.SaveCurrentScene(bossFightScene);
+        // Remember which scene we're in so the Save File Select screen can save progress to the correct scene
+        GameManager.Instance.currentSceneName = bossFightScene;
 
-        // Load the boss fight scene directly
-        // For now, all bosses load the same scene during early development
+        // Load the boss fight scene (all bosses use same scene during early development)
         SceneManager.LoadScene(bossFightScene);
     }
 }

@@ -8,6 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start screen.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Start Menu screen.unity
+    guid: 20549e8768c114845a3d4c2b5a52d2ab
+  - enabled: 1
+    path: Assets/Scenes/Save file select screen.unity
+    guid: ea28f51c751d47f4eb87771994f29ce8
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 51127870c9cda6c4bb8a825b559774dd
+  - enabled: 1
+    path: Assets/Scenes/Boss Select Screen.unity
+    guid: e74fbce7ade679c49a50db8846473089
+  - enabled: 1
+    path: Assets/Scenes/Boss Fight Bubble Blum.unity
+    guid: fe46456081f816a4f97bd5c668cf26c5
+  - enabled: 1
+    path: Assets/Scenes/Gallery.unity
+    guid: 4336f093c12e7064ca30694f95bb7bf8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

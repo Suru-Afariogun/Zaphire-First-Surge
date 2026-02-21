@@ -88,8 +88,8 @@ public class PauseMenuManager : MonoBehaviour
         }
     }
 
-    void OnEnable() => controls.UI.Enable();
-    void OnDisable() => controls.UI.Disable();
+    void OnEnable() { if (controls != null) controls.UI.Enable(); }
+    void OnDisable() { if (controls != null) controls.UI.Disable(); }
 
     public void TogglePause()
     {

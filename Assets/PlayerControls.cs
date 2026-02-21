@@ -111,7 +111,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""AttackA"",
+                    ""name"": ""LightAttack"",
                     ""type"": ""Button"",
                     ""id"": ""fdc34687-95d7-473c-ac83-daac4f391653"",
                     ""expectedControlType"": """",
@@ -120,9 +120,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""AttackB"",
+                    ""name"": ""HeavyAttack"",
                     ""type"": ""Button"",
-                    ""id"": ""2a8e798f-8988-4fab-8f9f-58c91e86a476"",
+                    ""id"": ""96bab3e2-0920-4bf4-af91-0b4aef9e84d1"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -131,7 +131,52 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Dash"",
                     ""type"": ""Button"",
-                    ""id"": ""96bab3e2-0920-4bf4-af91-0b4aef9e84d1"",
+                    ""id"": ""2a8e798f-8988-4fab-8f9f-58c91e86a476"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HealingCore"",
+                    ""type"": ""Button"",
+                    ""id"": ""1d5b56ac-e916-409e-9afc-12404ac46890"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PowerCore"",
+                    ""type"": ""Button"",
+                    ""id"": ""7662d6a6-3e14-4a0d-bd6b-44ae0ae38c99"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CombatStyleMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""6f898fcd-f1ec-4f87-b751-45d558280621"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CombatStyleRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""7938fd16-4692-4332-937e-99d5de211c63"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CombatStyleLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab009ab3-0d58-42bd-bbbe-9a0231e9d047"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -300,7 +345,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackA"",
+                    ""action"": ""LightAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -311,7 +356,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackA"",
+                    ""action"": ""LightAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -322,7 +367,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackA"",
+                    ""action"": ""LightAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -333,7 +378,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackB"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -344,7 +389,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackB"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -355,7 +400,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackB"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -366,7 +411,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Dash"",
+                    ""action"": ""HeavyAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -377,7 +422,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Dash"",
+                    ""action"": ""HeavyAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -388,7 +433,139 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Dash"",
+                    ""action"": ""HeavyAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a77df8a2-aadf-4439-937c-da7aa5e30bde"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HealingCore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ba761f9-cbd4-4c68-968c-be75e60baf72"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HealingCore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""68aa8454-10a2-488d-b6f2-d9d27e03b171"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HealingCore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""006cab4f-1526-4ec0-a616-27c9494e06f0"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PowerCore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7e03f795-a0ea-4118-9803-2f7de62ae351"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PowerCore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cdfe0022-063d-4d7d-a722-ba57b82f4855"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PowerCore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c10df82b-9924-4e62-a803-4254bda70f15"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CombatStyleMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""96ced708-59bc-4432-92db-4c3b03b55f49"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CombatStyleMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8be20f7-7c20-42aa-9d94-834291d9f031"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CombatStyleRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3bc9e495-3996-4831-8589-102f3436f82a"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CombatStyleRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2619021d-1f98-47f8-a1ae-585c6fb50e3e"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CombatStyleLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17e5c3f9-2daf-4118-b659-eb90ecf1ab3e"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CombatStyleLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -401,9 +578,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_AttackA = m_Player.FindAction("AttackA", throwIfNotFound: true);
-        m_Player_AttackB = m_Player.FindAction("AttackB", throwIfNotFound: true);
+        m_Player_LightAttack = m_Player.FindAction("LightAttack", throwIfNotFound: true);
+        m_Player_HeavyAttack = m_Player.FindAction("HeavyAttack", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
+        m_Player_HealingCore = m_Player.FindAction("HealingCore", throwIfNotFound: true);
+        m_Player_PowerCore = m_Player.FindAction("PowerCore", throwIfNotFound: true);
+        m_Player_CombatStyleMenu = m_Player.FindAction("CombatStyleMenu", throwIfNotFound: true);
+        m_Player_CombatStyleRight = m_Player.FindAction("CombatStyleRight", throwIfNotFound: true);
+        m_Player_CombatStyleLeft = m_Player.FindAction("CombatStyleLeft", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -486,9 +668,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_AttackA;
-    private readonly InputAction m_Player_AttackB;
+    private readonly InputAction m_Player_LightAttack;
+    private readonly InputAction m_Player_HeavyAttack;
     private readonly InputAction m_Player_Dash;
+    private readonly InputAction m_Player_HealingCore;
+    private readonly InputAction m_Player_PowerCore;
+    private readonly InputAction m_Player_CombatStyleMenu;
+    private readonly InputAction m_Player_CombatStyleRight;
+    private readonly InputAction m_Player_CombatStyleLeft;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -509,17 +696,37 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         /// <summary>
-        /// Provides access to the underlying input action "Player/AttackA".
+        /// Provides access to the underlying input action "Player/LightAttack".
         /// </summary>
-        public InputAction @AttackA => m_Wrapper.m_Player_AttackA;
+        public InputAction @LightAttack => m_Wrapper.m_Player_LightAttack;
         /// <summary>
-        /// Provides access to the underlying input action "Player/AttackB".
+        /// Provides access to the underlying input action "Player/HeavyAttack".
         /// </summary>
-        public InputAction @AttackB => m_Wrapper.m_Player_AttackB;
+        public InputAction @HeavyAttack => m_Wrapper.m_Player_HeavyAttack;
         /// <summary>
         /// Provides access to the underlying input action "Player/Dash".
         /// </summary>
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/HealingCore".
+        /// </summary>
+        public InputAction @HealingCore => m_Wrapper.m_Player_HealingCore;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/PowerCore".
+        /// </summary>
+        public InputAction @PowerCore => m_Wrapper.m_Player_PowerCore;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/CombatStyleMenu".
+        /// </summary>
+        public InputAction @CombatStyleMenu => m_Wrapper.m_Player_CombatStyleMenu;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/CombatStyleRight".
+        /// </summary>
+        public InputAction @CombatStyleRight => m_Wrapper.m_Player_CombatStyleRight;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/CombatStyleLeft".
+        /// </summary>
+        public InputAction @CombatStyleLeft => m_Wrapper.m_Player_CombatStyleLeft;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -552,15 +759,30 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
-            @AttackA.started += instance.OnAttackA;
-            @AttackA.performed += instance.OnAttackA;
-            @AttackA.canceled += instance.OnAttackA;
-            @AttackB.started += instance.OnAttackB;
-            @AttackB.performed += instance.OnAttackB;
-            @AttackB.canceled += instance.OnAttackB;
+            @LightAttack.started += instance.OnLightAttack;
+            @LightAttack.performed += instance.OnLightAttack;
+            @LightAttack.canceled += instance.OnLightAttack;
+            @HeavyAttack.started += instance.OnHeavyAttack;
+            @HeavyAttack.performed += instance.OnHeavyAttack;
+            @HeavyAttack.canceled += instance.OnHeavyAttack;
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
+            @HealingCore.started += instance.OnHealingCore;
+            @HealingCore.performed += instance.OnHealingCore;
+            @HealingCore.canceled += instance.OnHealingCore;
+            @PowerCore.started += instance.OnPowerCore;
+            @PowerCore.performed += instance.OnPowerCore;
+            @PowerCore.canceled += instance.OnPowerCore;
+            @CombatStyleMenu.started += instance.OnCombatStyleMenu;
+            @CombatStyleMenu.performed += instance.OnCombatStyleMenu;
+            @CombatStyleMenu.canceled += instance.OnCombatStyleMenu;
+            @CombatStyleRight.started += instance.OnCombatStyleRight;
+            @CombatStyleRight.performed += instance.OnCombatStyleRight;
+            @CombatStyleRight.canceled += instance.OnCombatStyleRight;
+            @CombatStyleLeft.started += instance.OnCombatStyleLeft;
+            @CombatStyleLeft.performed += instance.OnCombatStyleLeft;
+            @CombatStyleLeft.canceled += instance.OnCombatStyleLeft;
         }
 
         /// <summary>
@@ -578,15 +800,30 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
-            @AttackA.started -= instance.OnAttackA;
-            @AttackA.performed -= instance.OnAttackA;
-            @AttackA.canceled -= instance.OnAttackA;
-            @AttackB.started -= instance.OnAttackB;
-            @AttackB.performed -= instance.OnAttackB;
-            @AttackB.canceled -= instance.OnAttackB;
+            @LightAttack.started -= instance.OnLightAttack;
+            @LightAttack.performed -= instance.OnLightAttack;
+            @LightAttack.canceled -= instance.OnLightAttack;
+            @HeavyAttack.started -= instance.OnHeavyAttack;
+            @HeavyAttack.performed -= instance.OnHeavyAttack;
+            @HeavyAttack.canceled -= instance.OnHeavyAttack;
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
+            @HealingCore.started -= instance.OnHealingCore;
+            @HealingCore.performed -= instance.OnHealingCore;
+            @HealingCore.canceled -= instance.OnHealingCore;
+            @PowerCore.started -= instance.OnPowerCore;
+            @PowerCore.performed -= instance.OnPowerCore;
+            @PowerCore.canceled -= instance.OnPowerCore;
+            @CombatStyleMenu.started -= instance.OnCombatStyleMenu;
+            @CombatStyleMenu.performed -= instance.OnCombatStyleMenu;
+            @CombatStyleMenu.canceled -= instance.OnCombatStyleMenu;
+            @CombatStyleRight.started -= instance.OnCombatStyleRight;
+            @CombatStyleRight.performed -= instance.OnCombatStyleRight;
+            @CombatStyleRight.canceled -= instance.OnCombatStyleRight;
+            @CombatStyleLeft.started -= instance.OnCombatStyleLeft;
+            @CombatStyleLeft.performed -= instance.OnCombatStyleLeft;
+            @CombatStyleLeft.canceled -= instance.OnCombatStyleLeft;
         }
 
         /// <summary>
@@ -642,19 +879,19 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnJump(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "AttackA" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "LightAttack" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnAttackA(InputAction.CallbackContext context);
+        void OnLightAttack(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "AttackB" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "HeavyAttack" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnAttackB(InputAction.CallbackContext context);
+        void OnHeavyAttack(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Dash" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
@@ -662,5 +899,40 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDash(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "HealingCore" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHealingCore(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PowerCore" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPowerCore(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CombatStyleMenu" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCombatStyleMenu(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CombatStyleRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCombatStyleRight(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CombatStyleLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCombatStyleLeft(InputAction.CallbackContext context);
     }
 }

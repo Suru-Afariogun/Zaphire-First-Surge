@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     
     [Header("Combat")]
     public float attackCooldown = 1.2f;           // Time between attacks (prevents spam)
+    
+    [Header("Core Abilities (Hold to Charge)")]
+    public float healingCoreHoldDuration = 8f;    // Time in seconds to hold HealingCore button
+    public float powerCoreHoldDuration = 8f;      // Time in seconds to hold PowerCore button
 
     // ============================================
     // PRIVATE VARIABLES (Internal state)
@@ -36,6 +40,14 @@ public class PlayerController : MonoBehaviour
     private bool wasMoving = false;               // Previous frame's movement state (for animation optimization)
     private float attackTimer = 0f;               // Countdown timer for attack cooldown
     private bool isAttacking = false;             // Whether attack animation is playing
+
+    // Core ability charging (hold-to-charge mechanic)
+    private float healingCoreHoldTimer = 0f;      // Current hold time for HealingCore
+    private float powerCoreHoldTimer = 0f;        // Current hold time for PowerCore
+    private bool isHoldingHealingCore = false;    // Whether HealingCore button is currently held
+    private bool isHoldingPowerCore = false;      // Whether PowerCore button is currently held
+    private bool isChargingHealingCore = false;   // Whether currently charging HealingCore
+    private bool isChargingPowerCore = false;     // Whether currently charging PowerCore
 
     private PlayerControls controls;              // Input system controls
 
@@ -59,15 +71,22 @@ public class PlayerController : MonoBehaviour
         // AttackA/AttackB input actions are treated as Light/Heavy attack buttons
         controls.Player.LightAttack.performed += ctx => TryLightAttack();
         controls.Player.HeavyAttack.performed += ctx => TryHeavyAttack();
-        controls.Player.Heal.performed += ctx => TryHeal();
-        controls.Player.Buff.performed += ctx => TryBuff();
-        controls.Player.CoreBurst.performed += ctx => TryCoreBurst();
-
-        // NOTE: Heal/Buff/CoreBurst don't have input actions yet.
-        // After you add them to PlayerControls.inputactions, you can hook them up like:
-        // controls.Player.Heal.performed      += ctx => TryHeal();
-        // controls.Player.Buff.performed      += ctx => TryBuff();
-        // controls.Player.CoreBurst.performed += ctx => TryCoreBurst();
+        
+        // HealingCore and PowerCore abilities (hold-to-charge)
+        controls.Player.HealingCore.started += ctx => StartChargingHealingCore();
+        controls.Player.HealingCore.canceled += ctx => CancelChargingHealingCore();
+        controls.Player.PowerCore.started += ctx => StartChargingPowerCore();
+        controls.Player.PowerCore.canceled += ctx => CancelChargingPowerCore();
+        
+        // Combat Style Menu (like Mega Man 11's weapon wheel)
+        controls.Player.CombatStyleMenu.performed += ctx => ToggleCombatStyleMenu();
+        
+        // Combat Style Cycling (left/right triggers like Mega Man 11)
+        controls.Player.CombatStyleLeft.performed += ctx => CycleCombatStylePrevious();
+        controls.Player.CombatStyleRight.performed += ctx => CycleCombatStyleNext();
+        
+        // NOTE: Core Burst is activated by pressing HealingCore + PowerCore simultaneously
+        // No separate input action needed - detected in Update() via combo
     }
 
     /// <summary>
@@ -143,12 +162,28 @@ public class PlayerController : MonoBehaviour
         // Update animator with grounded state (affects jump/fall animations)
         characterAnimator?.SetGrounded(isGrounded);
         
+        // Update core ability charging (hold-to-charge mechanic)
+        UpdateCoreAbilityCharging();
+        
+        // Check for Core Burst combo (HealingCore + PowerCore pressed simultaneously)
+        // Only trigger if both are fully charged or being held together
+        bool healingCorePressed = controls.Player.HealingCore.IsPressed();
+        bool powerCorePressed = controls.Player.PowerCore.IsPressed();
+        if (healingCorePressed && powerCorePressed && attackTimer <= 0f && !isAttacking)
+        {
+            TryCoreBurst();
+        }
+        
         // Move player horizontally (always allow movement, even while attacking)
         // This gives Mega Man/Gunvolt feel where you can shoot while moving
         MovePlayer();
         
         // Apply enhanced falling physics for snappier jump feel
         ApplyBetterJump();
+        
+        // Allow combat style cycling even when menu is closed (Mega Man 11 style)
+        // This lets players quickly switch without opening the menu
+        // The menu toggle is handled separately via button press
     }
 
     // ============================================
@@ -166,25 +201,17 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
         
         // Flip sprite to face movement direction
+        // If your sprites all face left by default, flip when moving right
         if (moveInput.x != 0)
-            sr.flipX = moveInput.x < 0;  // Flip left if moving left
+            sr.flipX = moveInput.x > 0;  // Flip horizontally when moving right (if sprites face left)
         
         // Update animation based on movement
         bool isMoving = Mathf.Abs(moveInput.x) > 0.1f;  // Small threshold to avoid jitter
         
-        // Only trigger animation state change when movement state actually changes
-        // This prevents spamming animation triggers every frame
-        if (isMoving != wasMoving)
-        {
-            characterAnimator?.SetMoving(isMoving);
-            wasMoving = isMoving;
-        }
-        // Keep animator bool updated even if state didn't change
-        // (some animators need the bool value, not just the trigger)
-        else if (characterAnimator != null && characterAnimator.anim != null)
-        {
-            characterAnimator.anim.SetBool("IsMoving", isMoving);
-        }
+        // Always update the IsMoving bool - this ensures the Animator responds immediately
+        // when movement stops, even if the state didn't technically "change"
+        characterAnimator?.SetMoving(isMoving);
+        wasMoving = isMoving;
     }
 
     /// <summary>
@@ -215,12 +242,12 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             
             // Trigger jump animation
-            characterAnimator?.SetMoving(true);
+            characterAnimator?.TriggerJump();
         }
     }
 
     // ============================================
-    // COMBAT & ABILITIES (Light/Heavy/Heal/Buff/CoreBurst)
+    // COMBAT & ABILITIES (Light/Heavy/HealingCore/PowerCore/CoreBurst)
     // ============================================
     
     /// <summary>
@@ -240,15 +267,8 @@ public class PlayerController : MonoBehaviour
         
         // Do NOT touch velocity here – movement continues as normal
         
-        // Trigger appropriate animation based on whether grounded or in air
-        if (isGrounded)
-        {
-            characterAnimator?.TriggerGroundLightAttack();
-        }
-        else
-        {
-            characterAnimator?.TriggerAirLightAttack();
-        }
+        // Trigger animation (automatically chooses ground or air variant)
+        characterAnimator?.TriggerLightAttack();
         
         // End attack state after animation duration
         Invoke(nameof(EndAttack), 0.6f);
@@ -270,59 +290,221 @@ public class PlayerController : MonoBehaviour
         
         // Movement is NOT stopped – still free to run while attacking
         
-        // Trigger appropriate animation
-        if (isGrounded)
-        {
-            characterAnimator?.TriggerGroundHeavyAttack();
-        }
-        else
-        {
-            characterAnimator?.TriggerAirHeavyAttack();
-        }
+        // Trigger animation (automatically chooses ground or air variant)
+        characterAnimator?.TriggerHeavyAttack();
         
         // End attack state after animation duration (slightly longer than light)
         Invoke(nameof(EndAttack), 0.8f);
     }
 
+    // ============================================
+    // CORE ABILITY CHARGING (Hold-to-Charge System)
+    // ============================================
+
     /// <summary>
-    /// Heal ability.
-    /// Currently only plays an animation hook – you can add HP logic later.
+    /// Starts charging HealingCore when button is pressed.
     /// </summary>
-    void TryHeal()
+    void StartChargingHealingCore()
+    {
+        // Don't start charging if already attacking or on cooldown
+        if (attackTimer > 0f || isAttacking || isChargingPowerCore)
+            return;
+
+        isHoldingHealingCore = true;
+        isChargingHealingCore = true;
+        healingCoreHoldTimer = 0f;
+        
+        Debug.Log("Started charging HealingCore...");
+    }
+
+    /// <summary>
+    /// Cancels HealingCore charge if button is released early.
+    /// </summary>
+    void CancelChargingHealingCore()
+    {
+        if (isChargingHealingCore && healingCoreHoldTimer < healingCoreHoldDuration)
+        {
+            // Button released before full charge - cancel
+            Debug.Log("HealingCore charge cancelled (released early)");
+            ResetHealingCoreCharge();
+        }
+        
+        isHoldingHealingCore = false;
+    }
+
+    /// <summary>
+    /// Starts charging PowerCore when button is pressed.
+    /// </summary>
+    void StartChargingPowerCore()
+    {
+        // Don't start charging if already attacking or on cooldown
+        if (attackTimer > 0f || isAttacking || isChargingHealingCore)
+            return;
+
+        isHoldingPowerCore = true;
+        isChargingPowerCore = true;
+        powerCoreHoldTimer = 0f;
+        
+        Debug.Log("Started charging PowerCore...");
+    }
+
+    /// <summary>
+    /// Cancels PowerCore charge if button is released early.
+    /// </summary>
+    void CancelChargingPowerCore()
+    {
+        if (isChargingPowerCore && powerCoreHoldTimer < powerCoreHoldDuration)
+        {
+            // Button released before full charge - cancel
+            Debug.Log("PowerCore charge cancelled (released early)");
+            ResetPowerCoreCharge();
+        }
+        
+        isHoldingPowerCore = false;
+    }
+
+    /// <summary>
+    /// Updates the charging timers for both core abilities.
+    /// Called every frame in Update().
+    /// </summary>
+    void UpdateCoreAbilityCharging()
+    {
+        // Update HealingCore charging
+        if (isChargingHealingCore && isHoldingHealingCore)
+        {
+            healingCoreHoldTimer += Time.deltaTime;
+            
+            // Update animator with charging state and progress
+            float progress = GetHealingCoreChargeProgress();
+            characterAnimator?.SetHealingCoreCharging(true, progress);
+            
+            // Check if fully charged
+            if (healingCoreHoldTimer >= healingCoreHoldDuration)
+            {
+                ActivateHealingCore();
+            }
+        }
+        else
+        {
+            // Not charging - reset animator parameters
+            characterAnimator?.SetHealingCoreCharging(false, 0f);
+        }
+
+        // Update PowerCore charging
+        if (isChargingPowerCore && isHoldingPowerCore)
+        {
+            powerCoreHoldTimer += Time.deltaTime;
+            
+            // Update animator with charging state and progress
+            float progress = GetPowerCoreChargeProgress();
+            characterAnimator?.SetPowerCoreCharging(true, progress);
+            
+            // Check if fully charged
+            if (powerCoreHoldTimer >= powerCoreHoldDuration)
+            {
+                ActivatePowerCore();
+            }
+        }
+        else
+        {
+            // Not charging - reset animator parameters
+            characterAnimator?.SetPowerCoreCharging(false, 0f);
+        }
+    }
+
+    /// <summary>
+    /// Activates HealingCore ability after full charge.
+    /// </summary>
+    void ActivateHealingCore()
     {
         if (attackTimer > 0f || isAttacking)
+        {
+            ResetHealingCoreCharge();
             return;
+        }
 
         isAttacking = true;
         attackTimer = attackCooldown;
 
-        // No movement changes – can heal while moving or idle
-        characterAnimator?.TriggerHeal();
+        // Reset charging state
+        ResetHealingCoreCharge();
+
+        // Trigger the ability
+        characterAnimator?.TriggerHealingCore();
+        Debug.Log("HealingCore activated!");
 
         // Duration can be tweaked based on your animation length
         Invoke(nameof(EndAttack), 0.7f);
     }
 
     /// <summary>
-    /// Buff ability (e.g., temporary attack/defense boost).
-    /// Right now it's just an animation hook.
+    /// Activates PowerCore ability after full charge.
     /// </summary>
-    void TryBuff()
+    void ActivatePowerCore()
     {
         if (attackTimer > 0f || isAttacking)
+        {
+            ResetPowerCoreCharge();
             return;
+        }
 
         isAttacking = true;
         attackTimer = attackCooldown;
 
-        characterAnimator?.TriggerBuff();
+        // Reset charging state
+        ResetPowerCoreCharge();
+
+        // Trigger the ability
+        characterAnimator?.TriggerPowerCore();
+        Debug.Log("PowerCore activated!");
 
         Invoke(nameof(EndAttack), 0.7f);
     }
 
     /// <summary>
-    /// Core Burst ability (your \"super\" move).
-    /// Again, animation only for now – damage/effects can be added later.
+    /// Resets HealingCore charging state.
+    /// </summary>
+    void ResetHealingCoreCharge()
+    {
+        isChargingHealingCore = false;
+        isHoldingHealingCore = false;
+        healingCoreHoldTimer = 0f;
+    }
+
+    /// <summary>
+    /// Resets PowerCore charging state.
+    /// </summary>
+    void ResetPowerCoreCharge()
+    {
+        isChargingPowerCore = false;
+        isHoldingPowerCore = false;
+        powerCoreHoldTimer = 0f;
+    }
+
+    /// <summary>
+    /// Gets the current HealingCore charge progress (0.0 to 1.0).
+    /// Useful for UI progress bars or visual feedback.
+    /// </summary>
+    public float GetHealingCoreChargeProgress()
+    {
+        if (!isChargingHealingCore) return 0f;
+        return Mathf.Clamp01(healingCoreHoldTimer / healingCoreHoldDuration);
+    }
+
+    /// <summary>
+    /// Gets the current PowerCore charge progress (0.0 to 1.0).
+    /// Useful for UI progress bars or visual feedback.
+    /// </summary>
+    public float GetPowerCoreChargeProgress()
+    {
+        if (!isChargingPowerCore) return 0f;
+        return Mathf.Clamp01(powerCoreHoldTimer / powerCoreHoldDuration);
+    }
+
+    /// <summary>
+    /// Core Burst ability (your "super" move).
+    /// Activated by pressing HealingCore + PowerCore simultaneously.
+    /// Animation only for now – damage/effects can be added later.
     /// </summary>
     void TryCoreBurst()
     {
@@ -344,6 +526,73 @@ public class PlayerController : MonoBehaviour
     void EndAttack()
     {
         isAttacking = false;
+    }
+
+    // ============================================
+    // COMBAT STYLE MENU (Mega Man 11 style weapon wheel)
+    // ============================================
+
+    /// <summary>
+    /// Toggles the combat style menu open/closed.
+    /// Works like Mega Man 11's weapon select wheel.
+    /// </summary>
+    void ToggleCombatStyleMenu()
+    {
+        // Don't toggle if paused
+        if (PauseMenu.isPaused) return;
+
+        if (CombatStyleMenu.Instance != null)
+        {
+            CombatStyleMenu.Instance.ToggleMenu();
+        }
+        else
+        {
+            Debug.LogWarning("CombatStyleMenu.Instance not found! Make sure a CombatStyleMenu object exists in the scene.");
+        }
+    }
+
+    /// <summary>
+    /// Cycles to the previous combat style (like pressing left trigger in Mega Man 11).
+    /// Works whether menu is open or closed.
+    /// </summary>
+    void CycleCombatStylePrevious()
+    {
+        // Don't cycle if paused
+        if (PauseMenu.isPaused) return;
+
+        // Check if GameManager exists before using it
+        if (GameManager.Instance == null)
+        {
+            Debug.LogWarning("GameManager.Instance is null. Cannot cycle combat style.");
+            return;
+        }
+
+        GameManager.Instance.CycleToPreviousCombatStyle();
+        
+        // If menu is open, it should update to show the new selection
+        // (You'll handle UI updates in the CombatStyleMenu script when you create the UI)
+    }
+
+    /// <summary>
+    /// Cycles to the next combat style (like pressing right trigger in Mega Man 11).
+    /// Works whether menu is open or closed.
+    /// </summary>
+    void CycleCombatStyleNext()
+    {
+        // Don't cycle if paused
+        if (PauseMenu.isPaused) return;
+
+        // Check if GameManager exists before using it
+        if (GameManager.Instance == null)
+        {
+            Debug.LogWarning("GameManager.Instance is null. Cannot cycle combat style.");
+            return;
+        }
+
+        GameManager.Instance.CycleToNextCombatStyle();
+        
+        // If menu is open, it should update to show the new selection
+        // (You'll handle UI updates in the CombatStyleMenu script when you create the UI)
     }
 
     // ============================================

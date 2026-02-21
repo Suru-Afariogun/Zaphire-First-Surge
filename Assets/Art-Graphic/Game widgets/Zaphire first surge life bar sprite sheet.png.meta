@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 61a00d5bb64482d448e2f8c642f17350
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8498087590302425925
+    second: Zaphire first surge life bar sprite sheet_0
+  - first:
+      213: 7023350944169688745
+    second: Zaphire first surge life bar sprite sheet_1
+  - first:
+      213: 2815783903897529053
+    second: Zaphire first surge life bar sprite sheet_2
+  - first:
+      213: -6875122689818154097
+    second: Zaphire first surge life bar sprite sheet_3
+  - first:
+      213: 4464564417251545853
+    second: Zaphire first surge life bar sprite sheet_4
+  - first:
+      213: -3612600621728500525
+    second: Zaphire first surge life bar sprite sheet_5
+  - first:
+      213: -7603397520905283131
+    second: Zaphire first surge life bar sprite sheet_6
+  - first:
+      213: 8839160654479623292
+    second: Zaphire first surge life bar sprite sheet_7
+  - first:
+      213: 4574389853717104566
+    second: Zaphire first surge life bar sprite sheet_8
+  - first:
+      213: -5804754667617451585
+    second: Zaphire first surge life bar sprite sheet_9
+  - first:
+      213: 6080259036468306598
+    second: Zaphire first surge life bar sprite sheet_10
+  - first:
+      213: 6215175630728055528
+    second: Zaphire first surge life bar sprite sheet_11
+  - first:
+      213: 3415638217734688834
+    second: Zaphire first surge life bar sprite sheet_12
+  - first:
+      213: -7667791604047890006
+    second: Zaphire first surge life bar sprite sheet_13
+  - first:
+      213: -8644246275100289713
+    second: Zaphire first surge life bar sprite sheet_14
+  - first:
+      213: -3373373132058925952
+    second: Zaphire first surge life bar sprite sheet_15
+  - first:
+      213: -905966270689638212
+    second: Zaphire first surge life bar sprite sheet_16
+  - first:
+      213: -2542657360893026573
+    second: Zaphire first surge life bar sprite sheet_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1338
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543a12a73a54fe570800000000000000
+      internalID: 8498087590302425925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1343
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae7320f874f77160800000000000000
+      internalID: 7023350944169688745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 1347
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda231cba8ca31720800000000000000
+      internalID: 2815783903897529053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 828
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b292ee658a690a0800000000000000
+      internalID: -6875122689818154097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 831
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df29027eea155fd30800000000000000
+      internalID: 4464564417251545853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 844
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4748affd67dddc0800000000000000
+      internalID: -3612600621728500525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 454
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9da504d3e4b7690800000000000000
+      internalID: -7603397520905283131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 497
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c740eda88c10baa70800000000000000
+      internalID: 8839160654479623292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 510
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b785f6f55f7b7f30800000000000000
+      internalID: 4574389853717104566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 85
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb10f5c726e517fa0800000000000000
+      internalID: -5804754667617451585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 159
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a26d0b016b616450800000000000000
+      internalID: 6080259036468306598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 158
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eac5368e4db04650800000000000000
+      internalID: 6215175630728055528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 130
+        width: 930
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2401359bcd8c66f20800000000000000
+      internalID: 3415638217734688834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2266
+        y: 35
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9b00d6928869590800000000000000
+      internalID: -7667791604047890006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 36
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4557addfc7790880800000000000000
+      internalID: -8644246275100289713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 36
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084e7c0620f5f21d0800000000000000
+      internalID: -3373373132058925952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 35
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb80f011a7c5d63f0800000000000000
+      internalID: -905966270689638212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zaphire first surge life bar sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 34
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe50721a9aa6bcd0800000000000000
+      internalID: -2542657360893026573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Zaphire first surge life bar sprite sheet_0: 8498087590302425925
+      Zaphire first surge life bar sprite sheet_1: 7023350944169688745
+      Zaphire first surge life bar sprite sheet_10: 6080259036468306598
+      Zaphire first surge life bar sprite sheet_11: 6215175630728055528
+      Zaphire first surge life bar sprite sheet_12: 3415638217734688834
+      Zaphire first surge life bar sprite sheet_13: -7667791604047890006
+      Zaphire first surge life bar sprite sheet_14: -8644246275100289713
+      Zaphire first surge life bar sprite sheet_15: -3373373132058925952
+      Zaphire first surge life bar sprite sheet_16: -905966270689638212
+      Zaphire first surge life bar sprite sheet_17: -2542657360893026573
+      Zaphire first surge life bar sprite sheet_2: 2815783903897529053
+      Zaphire first surge life bar sprite sheet_3: -6875122689818154097
+      Zaphire first surge life bar sprite sheet_4: 4464564417251545853
+      Zaphire first surge life bar sprite sheet_5: -3612600621728500525
+      Zaphire first surge life bar sprite sheet_6: -7603397520905283131
+      Zaphire first surge life bar sprite sheet_7: 8839160654479623292
+      Zaphire first surge life bar sprite sheet_8: 4574389853717104566
+      Zaphire first surge life bar sprite sheet_9: -5804754667617451585
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

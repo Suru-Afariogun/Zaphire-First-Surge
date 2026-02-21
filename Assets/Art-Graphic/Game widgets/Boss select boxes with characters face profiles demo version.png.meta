@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 0d45d1c91f344d446b4ef55f0caeb223
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3889566061471895290
+    second: Boss select boxes with characters face profiles demo version_0
+  - first:
+      213: -161907642799765869
+    second: Boss select boxes with characters face profiles demo version_1
+  - first:
+      213: 9162856240518336482
+    second: Boss select boxes with characters face profiles demo version_2
+  - first:
+      213: -2717443608981160288
+    second: Boss select boxes with characters face profiles demo version_3
+  - first:
+      213: -4755747669779396341
+    second: Boss select boxes with characters face profiles demo version_4
+  - first:
+      213: -8987631127152665502
+    second: Boss select boxes with characters face profiles demo version_5
+  - first:
+      213: -2737175214585827563
+    second: Boss select boxes with characters face profiles demo version_6
+  - first:
+      213: -7534503736106033349
+    second: Boss select boxes with characters face profiles demo version_7
+  - first:
+      213: 3628577040564016286
+    second: Boss select boxes with characters face profiles demo version_8
+  - first:
+      213: 3211763961755421769
+    second: Boss select boxes with characters face profiles demo version_9
+  - first:
+      213: -929672228424580371
+    second: Boss select boxes with characters face profiles demo version_10
+  - first:
+      213: -3061767571946517688
+    second: Boss select boxes with characters face profiles demo version_11
+  - first:
+      213: 5329753230456596960
+    second: Boss select boxes with characters face profiles demo version_12
+  - first:
+      213: -6686808625830243443
+    second: Boss select boxes with characters face profiles demo version_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_0
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 725
+        width: 316
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6017d8f564c750ac0800000000000000
+      internalID: -3889566061471895290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_1
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 983
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396cf705bd9c0cdf0800000000000000
+      internalID: -161907642799765869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_2
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 729
+        width: 315
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef01103431092f70800000000000000
+      internalID: 9162856240518336482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_3
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 987
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aeb58d6f63b94ad0800000000000000
+      internalID: -2717443608981160288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_4
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 728
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09486df0b0300eb0800000000000000
+      internalID: -4755747669779396341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_5
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 411
+        width: 314
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c52ddbb15854380800000000000000
+      internalID: -8987631127152665502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_6
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 655
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51fab9ef4a9930ad0800000000000000
+      internalID: -2737175214585827563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_7
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 415
+        width: 313
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3fdb8285c0107790800000000000000
+      internalID: -7534503736106033349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_8
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 659
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94d4f6e79b4b5230800000000000000
+      internalID: 3628577040564016286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_9
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 417
+        width: 316
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c45da7e4a729c20800000000000000
+      internalID: 3211763961755421769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_10
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 91
+        width: 314
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2053ba8042913f0800000000000000
+      internalID: -929672228424580371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_11
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 344
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b41518d9a6285d0800000000000000
+      internalID: -3061767571946517688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_12
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 93
+        width: 316
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e92bd9235617f940800000000000000
+      internalID: 5329753230456596960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss select boxes with characters face profiles demo version_13
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 336
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83de58abfea333a0800000000000000
+      internalID: -6686808625830243443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boss select boxes with characters face profiles demo version_0: -3889566061471895290
+      Boss select boxes with characters face profiles demo version_1: -161907642799765869
+      Boss select boxes with characters face profiles demo version_10: -929672228424580371
+      Boss select boxes with characters face profiles demo version_11: -3061767571946517688
+      Boss select boxes with characters face profiles demo version_12: 5329753230456596960
+      Boss select boxes with characters face profiles demo version_13: -6686808625830243443
+      Boss select boxes with characters face profiles demo version_2: 9162856240518336482
+      Boss select boxes with characters face profiles demo version_3: -2717443608981160288
+      Boss select boxes with characters face profiles demo version_4: -4755747669779396341
+      Boss select boxes with characters face profiles demo version_5: -8987631127152665502
+      Boss select boxes with characters face profiles demo version_6: -2737175214585827563
+      Boss select boxes with characters face profiles demo version_7: -7534503736106033349
+      Boss select boxes with characters face profiles demo version_8: 3628577040564016286
+      Boss select boxes with characters face profiles demo version_9: 3211763961755421769
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

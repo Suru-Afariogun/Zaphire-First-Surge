@@ -54,7 +54,22 @@ public class PauseMenu : MonoBehaviour
     isPaused = false;
     Time.timeScale = 1f;
     SceneManager.LoadScene("Player Select");
-}
+    }
+
+    /// <summary>
+    /// Opens the Save File Select scene so the player can save progress mid-run.
+    /// Unpauses first; current scene, lives, and beaten bosses are already in GameManager and will be saved when they confirm a slot.
+    /// </summary>
+    public void GoToSaveFileSelect()
+    {
+        pauseMenuUI.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;
+        // Ensure we know which scene to save (in case we didn't set it when entering this scene)
+        if (GameManager.Instance != null && string.IsNullOrEmpty(GameManager.Instance.currentSceneName))
+            GameManager.Instance.currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Save File Select Screen");
+    }
 
    public void QuitToTitle()
 {

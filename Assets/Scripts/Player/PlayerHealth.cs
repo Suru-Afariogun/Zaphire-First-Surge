@@ -86,10 +86,12 @@ public class PlayerHealth : MonoBehaviour
     }
 
     /// <summary>
-    /// Called when health reaches 0.
+    /// Called when health reaches 0. Decrements GameManager lives so the save file shows the correct count when the player saves and continues later.
     /// </summary>
     void Die()
     {
+        if (GameManager.Instance != null && GameManager.Instance.currentLives > 0)
+            GameManager.Instance.currentLives--;
         Debug.Log("Player died!");
         OnDeath?.Invoke();
         // You can add death logic here (respawn, game over screen, etc.)

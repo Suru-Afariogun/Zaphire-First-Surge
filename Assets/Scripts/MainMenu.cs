@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void NewGame()
     {
-        SceneManager.LoadScene("Save File Select");
+        SceneManager.LoadScene("Save File Select Screen");
     }
 
     /// <summary>
@@ -16,47 +16,25 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void ContinueGame()
     {
-        // Check if there's a selected save file with a saved scene
-        if (!string.IsNullOrEmpty(GameManager.Instance.selectedSaveFile))
+        // Prefer current selected save file if it has data
+        if (GameManager.Instance != null && !string.IsNullOrEmpty(GameManager.Instance.selectedSaveFile))
         {
-            string savedScene = GameManager.Instance.GetSavedScene(GameManager.Instance.selectedSaveFile);
-            if (!string.IsNullOrEmpty(savedScene))
+            if (SaveFileSelectManager.Instance != null &&
+                SaveFileSelectManager.Instance.TryContinueFromSaveFile(GameManager.Instance.selectedSaveFile))
             {
-                Debug.Log("Loading saved scene: " + savedScene);
-                SceneManager.LoadScene(savedScene);
                 return;
             }
         }
 
-        // If no save file is selected or no saved scene exists, check all save files
-        // and use the most recent one if available
-        string[] saveFiles = { "Save File 1", "Save File 2", "Save File 3" };
-        string latestSaveFile = null;
-        string latestScene = null;
+        // Otherwise try first available save, or open save file select
+        if (SaveFileSelectManager.Instance != null && SaveFileSelectManager.Instance.TryContinueFromLatestSave())
+            return;
 
-        foreach (string saveFile in saveFiles)
-        {
-            string scene = GameManager.Instance.GetSavedScene(saveFile);
-            if (!string.IsNullOrEmpty(scene))
-            {
-                latestSaveFile = saveFile;
-                latestScene = scene;
-                break; // Use first found save file
-            }
-        }
-
-        if (!string.IsNullOrEmpty(latestScene))
-        {
-            GameManager.Instance.selectedSaveFile = latestSaveFile;
-            Debug.Log("Loading saved scene: " + latestScene + " from " + latestSaveFile);
-            SceneManager.LoadScene(latestScene);
-        }
+        Debug.Log("No save file found. Loading Save File Select Screen.");
+        if (SaveFileSelectManager.Instance != null)
+            SaveFileSelectManager.Instance.LoadSaveFileSelectScene();
         else
-        {
-            // No save found, load save file select scene
-            Debug.Log("No save file found. Loading Save File Select.");
-            SceneManager.LoadScene("Save File Select");
-        }
+            SceneManager.LoadScene("Save File Select Screen");
     }
 
     /// <summary>
@@ -72,7 +50,10 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void OpenSaveFileSelect()
     {
-        SceneManager.LoadScene("Save File Select");
+        if (SaveFileSelectManager.Instance != null)
+            SaveFileSelectManager.Instance.LoadSaveFileSelectScene();
+        else
+            SceneManager.LoadScene("Save File Select Screen");
     }
 
     // public void QuitGame() => Application.Quit();
