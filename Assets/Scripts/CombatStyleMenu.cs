@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Combat Style Menu - Works like Mega Man 11's weapon select wheel.
+/// Combat Style Menu - weapon select wheel.
 /// Can be opened/closed with a button, and styles can be cycled with triggers.
 /// </summary>
 public class CombatStyleMenu : MonoBehaviour
@@ -45,7 +45,7 @@ public class CombatStyleMenu : MonoBehaviour
         isMenuOpen = !isMenuOpen;
         combatStyleMenuUI.SetActive(isMenuOpen);
 
-        // Optional: Pause time when menu is open (like Mega Man 11)
+        // Optional: Pause time when menu is open
         // Time.timeScale = isMenuOpen ? 0f : 1f;
         
         Debug.Log("Combat Style Menu: " + (isMenuOpen ? "Opened" : "Closed"));

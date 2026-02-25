@@ -843,7 +843,9 @@ MonoBehaviour:
   selectedBoss: 
   selectedCombatStyle: 
   CombatStylePrefabs:
-  - {fileID: 3392160126681285936, guid: 9a97ec609968efb42a4a88107958e90e, type: 3}
+  - {fileID: 4449590928875546672, guid: 364c9d836b086eb49bd7c626a88b92af, type: 3}
+  currentLives: 3
+  currentSceneName: 
 --- !u!4 &1697291831
 Transform:
   m_ObjectHideFlags: 0

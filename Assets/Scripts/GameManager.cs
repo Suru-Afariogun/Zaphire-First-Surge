@@ -216,7 +216,7 @@ public class GameManager : MonoBehaviour
     }
 
     // ============================================
-    // COMBAT STYLE CYCLING (Mega Man 11 style)
+    // COMBAT STYLE CYCLING (weapon wheel style)
     // ============================================
 
     /// <summary>

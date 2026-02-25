@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Player controller for Mega Man/Gunvolt-style action platformer.
+/// Player controller for a fast-paced 2D action platformer.
 /// Handles movement, jumping, and combat input. Simplified from fighting game version.
 /// </summary>
 public class PlayerController : MonoBehaviour
@@ -18,12 +18,24 @@ public class PlayerController : MonoBehaviour
     
     [Header("Movement")]
     public float moveSpeed = 5f;                  // Horizontal movement speed
-    public float jumpForce = 10f;                  // Vertical force applied when jumping
+    public float jumpForce = 10f;                 // Vertical force applied when jumping
     public float fallMultiplier = 2.5f;           // Makes falling faster for snappier feel
     public float groundCheckRadius = 0.12f;       // Size of circle used to detect ground
+
+    [Header("Sprinting")]
+    public float sprintMoveSpeed = 8f;            // Horizontal speed while sprinting (movement + dash held)
+
+    [Header("Dash")]
+    public float dashSpeed = 12f;                 // Horizontal dash speed (faster than normal run)
+    public float dashDuration = 0.2f;             // How long the dash lasts (in seconds)
+    public float dashCooldown = 0.5f;             // Time before the player can dash again
     
     [Header("Combat")]
     public float attackCooldown = 1.2f;           // Time between attacks (prevents spam)
+    [Tooltip("Projectile fired when performing Light Attack (shoot).")]
+    public Projectile lightAttackProjectilePrefab;
+    [Tooltip("Where projectiles spawn from (e.g. hand or arm cannon).")]
+    public Transform projectileFirePoint;
     
     [Header("Core Abilities (Hold to Charge)")]
     public float healingCoreHoldDuration = 8f;    // Time in seconds to hold HealingCore button
@@ -49,6 +61,15 @@ public class PlayerController : MonoBehaviour
     private bool isChargingHealingCore = false;   // Whether currently charging HealingCore
     private bool isChargingPowerCore = false;     // Whether currently charging PowerCore
 
+    // Dash state
+    private bool isDashing = false;               // Whether dash is currently active
+    private float dashTimer = 0f;                 // Remaining dash time
+    private float dashCooldownTimer = 0f;         // Remaining cooldown before next dash
+    private int dashDirection = 0;                // -1 = left, 1 = right
+
+    // Sprint state (for logging transitions)
+    private bool wasSprinting = false;
+
     private PlayerControls controls;              // Input system controls
 
     // ============================================
@@ -68,6 +89,9 @@ public class PlayerController : MonoBehaviour
         controls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
         controls.Player.Jump.performed += ctx => TryJump();
 
+        // Dash input – quick horizontal burst for snappy movement
+        controls.Player.Dash.performed += ctx => TryDash();
+
         // AttackA/AttackB input actions are treated as Light/Heavy attack buttons
         controls.Player.LightAttack.performed += ctx => TryLightAttack();
         controls.Player.HeavyAttack.performed += ctx => TryHeavyAttack();
@@ -78,10 +102,10 @@ public class PlayerController : MonoBehaviour
         controls.Player.PowerCore.started += ctx => StartChargingPowerCore();
         controls.Player.PowerCore.canceled += ctx => CancelChargingPowerCore();
         
-        // Combat Style Menu (like Mega Man 11's weapon wheel)
+        // Combat Style Menu (weapon select wheel style)
         controls.Player.CombatStyleMenu.performed += ctx => ToggleCombatStyleMenu();
         
-        // Combat Style Cycling (left/right triggers like Mega Man 11)
+        // Combat Style Cycling (left/right triggers)
         controls.Player.CombatStyleLeft.performed += ctx => CycleCombatStylePrevious();
         controls.Player.CombatStyleRight.performed += ctx => CycleCombatStyleNext();
         
@@ -149,6 +173,20 @@ public class PlayerController : MonoBehaviour
         // Count down attack cooldown timer
         if (attackTimer > 0f) 
             attackTimer -= Time.deltaTime;
+
+        // Update dash cooldown and active dash timer
+        if (dashCooldownTimer > 0f)
+            dashCooldownTimer -= Time.deltaTime;
+        if (isDashing)
+        {
+            dashTimer -= Time.deltaTime;
+            if (dashTimer <= 0f)
+            {
+                isDashing = false;
+                // Tell Animator dash ended so it can transition out of Dash state
+                characterAnimator?.SetDashing(false);
+            }
+        }
         
         // Check if player is touching the ground using a circle overlap
         // This is more reliable than collision detection alone
@@ -175,13 +213,13 @@ public class PlayerController : MonoBehaviour
         }
         
         // Move player horizontally (always allow movement, even while attacking)
-        // This gives Mega Man/Gunvolt feel where you can shoot while moving
+        // This lets you shoot while moving for responsive combat
         MovePlayer();
         
         // Apply enhanced falling physics for snappier jump feel
         ApplyBetterJump();
         
-        // Allow combat style cycling even when menu is closed (Mega Man 11 style)
+        // Allow combat style cycling even when menu is closed
         // This lets players quickly switch without opening the menu
         // The menu toggle is handled separately via button press
     }
@@ -192,25 +230,47 @@ public class PlayerController : MonoBehaviour
     
     /// <summary>
     /// Handles horizontal movement and sprite flipping.
-    /// In Mega Man style, player can move while attacking (unlike fighting games).
+    /// In this style, the player can move while attacking (unlike traditional fighting games).
     /// </summary>
     void MovePlayer()
     {
-        // Set horizontal velocity based on input, preserve vertical velocity
+        // If we're currently dashing, override horizontal velocity and skip normal movement logic
+        if (isDashing)
+        {
+            // Dash moves in a fixed direction at dashSpeed, but keeps current vertical velocity (so you can dash in air if allowed)
+            rb.linearVelocity = new Vector2(dashDirection * dashSpeed, rb.linearVelocity.y);
+            return;
+        }
+
+        // Determine current movement / sprint state
+        bool isMoving = Mathf.Abs(moveInput.x) > 0.1f;  // Small threshold to avoid jitter
+        bool isDashButtonHeld = controls != null && controls.Player.Dash.IsPressed();
+        bool isSprinting = isMoving && isDashButtonHeld;
+
+        // Pick speed: sprint speed when sprinting, otherwise normal move speed
+        float currentSpeed = isSprinting ? sprintMoveSpeed : moveSpeed;
+
+        // Apply horizontal velocity based on current speed, preserve vertical velocity
         // NOTE: Using rb.linearVelocity (see explanation at bottom of file)
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(moveInput.x * currentSpeed, rb.linearVelocity.y);
         
         // Flip sprite to face movement direction
         // If your sprites all face left by default, flip when moving right
         if (moveInput.x != 0)
             sr.flipX = moveInput.x > 0;  // Flip horizontally when moving right (if sprites face left)
         
-        // Update animation based on movement
-        bool isMoving = Mathf.Abs(moveInput.x) > 0.1f;  // Small threshold to avoid jitter
-        
-        // Always update the IsMoving bool - this ensures the Animator responds immediately
-        // when movement stops, even if the state didn't technically "change"
+        // Update animation based on movement and sprint
         characterAnimator?.SetMoving(isMoving);
+
+        // Only log when sprint state changes (to avoid spamming the console)
+        if (isSprinting != wasSprinting)
+        {
+            Debug.Log(isSprinting
+                ? $"Sprint started. speed={sprintMoveSpeed}"
+                : "Sprint stopped.");
+        }
+        characterAnimator?.SetSprinting(isSprinting);
+        wasSprinting = isSprinting;
         wasMoving = isMoving;
     }
 
@@ -246,6 +306,36 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Starts a horizontal dash if not already dashing and cooldown has expired.
+    /// Works on ground or in air.
+    /// </summary>
+    void TryDash()
+    {
+        // Only allow dash if not already dashing and off cooldown (ground or air)
+        if (isDashing || dashCooldownTimer > 0f)
+            return;
+
+        // Determine dash direction: use input if available, otherwise use facing direction
+        float dir = moveInput.x;
+        if (Mathf.Abs(dir) < 0.1f)
+        {
+            // If sprites face left by default and we flip when moving right,
+            // then flipX == true means facing right
+            dir = (sr != null && sr.flipX) ? 1f : -1f;
+        }
+        dashDirection = dir >= 0 ? 1 : -1;
+
+        isDashing = true;
+        dashTimer = dashDuration;
+        dashCooldownTimer = dashCooldown;
+
+        Debug.Log($"Dash started. dir={dashDirection}, speed={dashSpeed}, duration={dashDuration}, cooldown={dashCooldown}");
+
+        // Trigger dash animation parameter in Animator (expects a trigger named \"dash\")
+        characterAnimator?.TriggerDash();
+    }
+
     // ============================================
     // COMBAT & ABILITIES (Light/Heavy/HealingCore/PowerCore/CoreBurst)
     // ============================================
@@ -269,9 +359,24 @@ public class PlayerController : MonoBehaviour
         
         // Trigger animation (automatically chooses ground or air variant)
         characterAnimator?.TriggerLightAttack();
+
+        // Fire projectile in facing direction
+        FireLightAttackProjectile();
         
         // End attack state after animation duration
         Invoke(nameof(EndAttack), 0.6f);
+    }
+
+    void FireLightAttackProjectile()
+    {
+        if (lightAttackProjectilePrefab == null || projectileFirePoint == null) return;
+
+        Projectile proj = Instantiate(lightAttackProjectilePrefab, projectileFirePoint.position, Quaternion.identity);
+
+        // If sprites face left by default and we flip when moving right,
+        // then flipX == true means facing right
+        Vector2 dir = (sr != null && sr.flipX) ? Vector2.right : Vector2.left;
+        proj.SetDirection(dir);
     }
     
     /// <summary>
@@ -423,6 +528,14 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        // Spend a core to heal (updates PlayerHealth and core UI)
+        if (CoreManager.Instance == null || !CoreManager.Instance.UseCoreForHeal())
+        {
+            Debug.Log("HealingCore tried to activate but no charged cores were available.");
+            ResetHealingCoreCharge();
+            return;
+        }
+
         isAttacking = true;
         attackTimer = attackCooldown;
 
@@ -431,6 +544,8 @@ public class PlayerController : MonoBehaviour
 
         // Trigger the ability
         characterAnimator?.TriggerHealingCore();
+        if (PlayerHealth.Instance != null)
+            PlayerHealth.Instance.PlayHealingCoreFlicker();
         Debug.Log("HealingCore activated!");
 
         // Duration can be tweaked based on your animation length
@@ -448,6 +563,14 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        // Spend a core to power up (updates power level and UI)
+        if (CoreManager.Instance == null || !CoreManager.Instance.UseCoreForPowerUp())
+        {
+            Debug.Log("PowerCore tried to activate but no charged cores were available or power is maxed.");
+            ResetPowerCoreCharge();
+            return;
+        }
+
         isAttacking = true;
         attackTimer = attackCooldown;
 
@@ -456,6 +579,8 @@ public class PlayerController : MonoBehaviour
 
         // Trigger the ability
         characterAnimator?.TriggerPowerCore();
+        if (PlayerHealth.Instance != null)
+            PlayerHealth.Instance.PlayPowerCoreFlicker();
         Debug.Log("PowerCore activated!");
 
         Invoke(nameof(EndAttack), 0.7f);
@@ -521,20 +646,20 @@ public class PlayerController : MonoBehaviour
     }
     
     /// <summary>
-    /// Called when any attack/ability animation finishes. Allows new actions.
+    /// Called when any attack/ability animation finishes. Clears IsAttacking so the Animator can transition back to Idle.
     /// </summary>
     void EndAttack()
     {
         isAttacking = false;
+        characterAnimator?.SetAttackActive(false);
     }
 
     // ============================================
-    // COMBAT STYLE MENU (Mega Man 11 style weapon wheel)
+    // COMBAT STYLE MENU (weapon wheel)
     // ============================================
 
     /// <summary>
-    /// Toggles the combat style menu open/closed.
-    /// Works like Mega Man 11's weapon select wheel.
+    /// Toggles the combat style menu open/closed (weapon select wheel style).
     /// </summary>
     void ToggleCombatStyleMenu()
     {
@@ -552,7 +677,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Cycles to the previous combat style (like pressing left trigger in Mega Man 11).
+    /// Cycles to the previous combat style.
     /// Works whether menu is open or closed.
     /// </summary>
     void CycleCombatStylePrevious()
@@ -574,7 +699,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Cycles to the next combat style (like pressing right trigger in Mega Man 11).
+    /// Cycles to the next combat style.
     /// Works whether menu is open or closed.
     /// </summary>
     void CycleCombatStyleNext()

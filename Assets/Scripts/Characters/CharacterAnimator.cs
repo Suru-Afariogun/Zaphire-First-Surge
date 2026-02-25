@@ -3,6 +3,18 @@ using UnityEngine;
 /// <summary>
 /// Thin wrapper around Animator so the rest of the code can stay clean.
 /// All combat / movement animation triggers live here.
+/// Uses bools (IsInAir, IsAttacking) so the Animator can cleanly transition back to Idle
+/// instead of getting stuck in Jump or Attack states.
+///
+/// ANIMATOR SETUP (in the Animator window):
+/// - Parameters: IsMoving (bool), IsGrounded (bool), IsInAir (bool), IsAttacking (bool), IsDashing (bool), IsSprinting (bool),
+///   IsChargingHealingCore (bool), HealingCoreChargeProgress (float),
+///   IsChargingPowerCore (bool), PowerCoreChargeProgress (float),
+///   Jump (trigger), LightAttackGround/Air, HeavyAttackGround/Air, HealingCoreActivated (trigger),
+///   PowerCoreActivated (trigger), CoreBurst (trigger), Dash (trigger), etc.
+/// - Run -&gt; Idle: condition IsMoving == false, Transition Duration 0, uncheck Exit Time.
+/// - Jump -&gt; Idle: condition IsInAir == false, Transition Duration 0, uncheck Exit Time.
+/// - Any Attack state -&gt; Idle: condition IsAttacking == false, Transition Duration 0, uncheck Exit Time.
 /// </summary>
 public class CharacterAnimator : MonoBehaviour
 {
@@ -12,40 +24,112 @@ public class CharacterAnimator : MonoBehaviour
     // Track grounded state so attack methods can choose the right animation
     private bool isGrounded = false;
 
+    /// <summary>Only set a bool if the Animator has that parameter (avoids errors when boss uses a different controller).</summary>
+    static bool SetBoolSafe(Animator a, string name, bool value)
+    {
+        if (a == null) return false;
+        for (int i = 0; i < a.parameterCount; i++)
+        {
+            var p = a.GetParameter(i);
+            if (p.name == name && p.type == AnimatorControllerParameterType.Bool)
+            {
+                a.SetBool(name, value);
+                return true;
+            }
+        }
+        return false;
+    }
+
     /// <summary>
     /// Tells the animator whether the character is running horizontally.
-    /// Matches the Mega Man 7 style spec: Animator uses a single bool "IsMoving"
-    /// to switch between Idle and Run, with instant transitions.
+    /// Animator: Idle and Run use bool "IsMoving". Use transition conditions only (no Exit Time),
+    /// and transition duration 0, so stopping input immediately returns to Idle.
     /// </summary>
     public void SetMoving(bool value)
     {
         if (anim == null) return;
-
-        // Update the "IsMoving" bool – Animator transitions should be:
-        // Idle  -> Run  when IsMoving == true
-        // Run   -> Idle when IsMoving == false
-        // Exit Time OFF, Transition Duration 0 (no smoothing / blending)
-        anim.SetBool("IsMoving", value);
+        SetBoolSafe(anim, "IsMoving", value);
     }
 
     /// <summary>
-    /// Updates grounded state for jump / fall animations.
+    /// Updates grounded state for jump/fall and clears IsInAir when we land so Jump state can exit.
     /// Also used internally to choose ground vs air attack animations.
     /// </summary>
     public void SetGrounded(bool value)
     {
         if (anim == null) return;
-        anim.SetBool("IsGrounded", value);
-        isGrounded = value;  // Store for attack methods
+        SetBoolSafe(anim, "IsGrounded", value);
+        isGrounded = value;
+        if (value)
+            SetBoolSafe(anim, "IsInAir", false);
     }
 
     /// <summary>
-    /// Triggers the jump animation.
+    /// Triggers the jump animation and sets IsInAir so we can exit Jump when we land.
+    /// Animator: add transition Jump -> Idle when IsInAir == false (no Exit Time).
     /// </summary>
     public void TriggerJump()
     {
         if (anim == null) return;
-        anim.SetTrigger("Jump");
+        SetBoolSafe(anim, "IsInAir", true);
+        SetTriggerSafe(anim, "Jump");
+    }
+
+    /// <summary>
+    /// Triggers the dash animation. Animator should have a trigger parameter named \"Dash\"
+    /// and a transition from Any State (or appropriate state) to Dash when this trigger is set.
+    /// Also sets IsDashing so the Animator can stay in Dash state until the dash finishes.
+    /// </summary>
+    static bool SetTriggerSafe(Animator a, string name)
+    {
+        if (a == null) return false;
+        for (int i = 0; i < a.parameterCount; i++)
+        {
+            var p = a.GetParameter(i);
+            if (p.name == name && p.type == AnimatorControllerParameterType.Trigger)
+            {
+                a.SetTrigger(name);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void TriggerDash()
+    {
+        if (anim == null) return;
+        SetBoolSafe(anim, "IsDashing", true);
+        SetTriggerSafe(anim, "Dash");
+    }
+
+    /// <summary>
+    /// Sets the IsDashing bool. PlayerController calls this when the dash starts and ends so
+    /// the Animator can hold Dash state while dashing and exit cleanly when finished.
+    /// </summary>
+    public void SetDashing(bool value)
+    {
+        if (anim == null) return;
+        SetBoolSafe(anim, "IsDashing", value);
+    }
+
+    /// <summary>
+    /// Sets the IsSprinting bool. Use this for a separate sprint animation when the player
+    /// is holding movement + dash together (faster running animation).
+    /// </summary>
+    public void SetSprinting(bool value)
+    {
+        if (anim == null) return;
+        SetBoolSafe(anim, "IsSprinting", value);
+    }
+
+    /// <summary>
+    /// Call when an attack/ability finishes so the Animator can leave Attack state.
+    /// PlayerController calls this from EndAttack(). Animator: add transition Attack -> Idle when IsAttacking == false.
+    /// </summary>
+    public void SetAttackActive(bool value)
+    {
+        if (anim == null) return;
+        SetBoolSafe(anim, "IsAttacking", value);
     }
 
     // -----------------------------
@@ -53,31 +137,29 @@ public class CharacterAnimator : MonoBehaviour
     // -----------------------------
 
     /// <summary>
-    /// Light attack - automatically uses ground or air animation based on current state.
-    /// Same button, same attack, but animation differs based on whether you're grounded.
+    /// Light attack - uses ground or air animation and sets IsAttacking so we can exit when EndAttack runs.
     /// </summary>
     public void TriggerLightAttack()
     {
         if (anim == null) return;
-        // Choose animation based on grounded state
+        SetBoolSafe(anim, "IsAttacking", true);
         if (isGrounded)
-            anim.SetTrigger("LightAttackGround");
+            SetTriggerSafe(anim, "LightAttackGround");
         else
-            anim.SetTrigger("LightAttackAir");
+            SetTriggerSafe(anim, "LightAttackAir");
     }
 
     /// <summary>
-    /// Heavy attack - automatically uses ground or air animation based on current state.
-    /// Same button, same attack, but animation differs based on whether you're grounded.
+    /// Heavy attack - uses ground or air animation and sets IsAttacking so we can exit when EndAttack runs.
     /// </summary>
     public void TriggerHeavyAttack()
     {
         if (anim == null) return;
-        // Choose animation based on grounded state
+        SetBoolSafe(anim, "IsAttacking", true);
         if (isGrounded)
-            anim.SetTrigger("HeavyAttackGround");
+            SetTriggerSafe(anim, "HeavyAttackGround");
         else
-            anim.SetTrigger("HeavyAttackAir");
+            SetTriggerSafe(anim, "HeavyAttackAir");
     }
 
     // -----------------------------
@@ -85,30 +167,33 @@ public class CharacterAnimator : MonoBehaviour
     // -----------------------------
 
     /// <summary>
-    /// HealingCore ability - uses the same animation whether grounded or in air.
+    /// HealingCore ability - sets IsAttacking so we can exit when EndAttack runs.
     /// </summary>
     public void TriggerHealingCore()
     {
         if (anim == null) return;
-        anim.SetTrigger("HealingCoreActivated");
+        SetBoolSafe(anim, "IsAttacking", true);
+        SetTriggerSafe(anim, "HealingCoreActivated");
     }
 
     /// <summary>
-    /// PowerCore ability - uses the same animation whether grounded or in air.
+    /// PowerCore ability - sets IsAttacking so we can exit when EndAttack runs.
     /// </summary>
     public void TriggerPowerCore()
     {
         if (anim == null) return;
-        anim.SetTrigger("PowerCoreActivated");
+        SetBoolSafe(anim, "IsAttacking", true);
+        SetTriggerSafe(anim, "PowerCoreActivated");
     }
 
     /// <summary>
-    /// Core Burst ability - uses the same animation whether grounded or in air.
+    /// Core Burst ability - sets IsAttacking so we can exit when EndAttack runs.
     /// </summary>
     public void TriggerCoreBurst()
     {
         if (anim == null) return;
-        anim.SetTrigger("CoreBurst");
+        SetBoolSafe(anim, "IsAttacking", true);
+        SetTriggerSafe(anim, "CoreBurst");
     }
 
     // -----------------------------
@@ -124,24 +209,40 @@ public class CharacterAnimator : MonoBehaviour
     public void SetHealingCoreCharging(bool isCharging, float chargeProgress = 0f)
     {
         if (anim == null) return;
-        anim.SetBool("IsChargingHealingCore", isCharging);
-        anim.SetFloat("HealingCoreChargeProgress", Mathf.Clamp01(chargeProgress));
+        SetBoolSafe(anim, "IsChargingHealingCore", isCharging);
+        SetFloatSafe(anim, "HealingCoreChargeProgress", Mathf.Clamp01(chargeProgress));
+    }
+
+    static bool SetFloatSafe(Animator a, string name, float value)
+    {
+        if (a == null) return false;
+        for (int i = 0; i < a.parameterCount; i++)
+        {
+            var p = a.GetParameter(i);
+            if (p.name == name && p.type == AnimatorControllerParameterType.Float)
+            {
+                a.SetFloat(name, value);
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>
     /// Sets the PowerCore charging state and progress.
     /// Call this every frame while charging to update the animator.
+    /// Animator parameter name: <b>IsChargingPowerCore</b> (bool) and PowerCoreChargeProgress (float).
     /// </summary>
     /// <param name="isCharging">Whether currently charging PowerCore</param>
     /// <param name="chargeProgress">Charge progress from 0.0 to 1.0</param>
     public void SetPowerCoreCharging(bool isCharging, float chargeProgress = 0f)
     {
         if (anim == null) return;
-        anim.SetBool("isChargingPowerCore", isCharging);
-        anim.SetFloat("PowerCoreChargeProgress", Mathf.Clamp01(chargeProgress));
+        SetBoolSafe(anim, "IsChargingPowerCore", isCharging);
+        SetFloatSafe(anim, "PowerCoreChargeProgress", Mathf.Clamp01(chargeProgress));
     }
 
-    // Commented out for now - going for snappy Mega Man feel rather than smooth recovery animations
+        // Commented out for now - going for snappy, instant recovery rather than smooth recovery animations
     // Uncomment if you want to add recovery animations later
     // public void TriggerRecover() => anim?.SetTrigger("Recover");
 }

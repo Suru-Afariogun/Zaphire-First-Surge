@@ -2,75 +2,61 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Manages the health bar UI. Displays the correct PNG based on health (0-8 bars).
-/// Assign the 9 health bar sprites in order: 0 bars, 1 bar, 2 bars... 8 bars.
+/// Life bar UI. Uses 10 image variants: index 0 = 0 bars filled, index 5 = 5 bars, index 9 = full (10 bars).
+/// When health is 50/100, shows image 5 (5 bars filled). Subscribe to PlayerHealth.OnHealthChanged.
 /// </summary>
 public class HealthBarUI : MonoBehaviour
 {
-    [Header("Health Bar Sprites")]
-    [Tooltip("Array of health bar sprites. Index 0 = 0 bars, Index 1 = 1 bar, ... Index 8 = 8 bars (full)")]
-    public Sprite[] healthBarSprites = new Sprite[9];  // 0-8 bars = 9 sprites total
+    [Header("Life Bar Sprites")]
+    [Tooltip("10 sprites: Index 0 = 0 bars, 1 = 1 bar, ... 9 = 10 bars (full). Health 50 → image 5.")]
+    public Sprite[] lifeBarSprites = new Sprite[10];
 
     [Header("UI Reference")]
-    public Image healthBarImage;  // The Image component that displays the health bar sprite
+    public Image lifeBarImage;
+
+    private bool _subscribed;
 
     private void Start()
     {
-        // Subscribe to health changes
-        if (PlayerHealth.Instance != null)
-        {
-            PlayerHealth.Instance.OnHealthChanged += UpdateHealthBar;
-            // Set initial health bar
-            UpdateHealthBar(PlayerHealth.Instance.currentHealth);
-        }
-        else
-        {
-            Debug.LogWarning("HealthBarUI: PlayerHealth.Instance not found! Make sure PlayerHealth component exists.");
-        }
+        if (lifeBarImage == null)
+            lifeBarImage = GetComponent<Image>();
+        if (lifeBarImage == null)
+            Debug.LogError("HealthBarUI: No Image component found!");
 
-        // Validate setup
-        if (healthBarImage == null)
-        {
-            healthBarImage = GetComponent<Image>();
-            if (healthBarImage == null)
-            {
-                Debug.LogError("HealthBarUI: No Image component found! Add an Image component to this GameObject.");
-            }
-        }
+        if (lifeBarSprites.Length != 10)
+            Debug.LogWarning($"HealthBarUI: Expected 10 life bar sprites (0-9 bars filled), found {lifeBarSprites.Length}.");
+    }
 
-        if (healthBarSprites.Length != 9)
-        {
-            Debug.LogWarning($"HealthBarUI: Expected 9 health bar sprites (0-8 bars), but found {healthBarSprites.Length}. Make sure all sprites are assigned!");
-        }
+    private void Update()
+    {
+        if (_subscribed) return;
+        if (PlayerHealth.Instance == null) return;
+
+        PlayerHealth.Instance.OnHealthChanged += UpdateLifeBar;
+        UpdateLifeBar(PlayerHealth.Instance.currentHealth);
+        _subscribed = true;
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe to prevent memory leaks
         if (PlayerHealth.Instance != null)
-        {
-            PlayerHealth.Instance.OnHealthChanged -= UpdateHealthBar;
-        }
+            PlayerHealth.Instance.OnHealthChanged -= UpdateLifeBar;
     }
 
     /// <summary>
-    /// Updates the health bar sprite based on current health.
+    /// Picks sprite by bars filled: 0–10 bars → index 0–9 (index 9 = full).
     /// </summary>
-    void UpdateHealthBar(int currentHealth)
+    void UpdateLifeBar(int currentHealth)
     {
-        if (healthBarImage == null) return;
+        if (lifeBarImage == null) return;
 
-        // Clamp health to valid range (0-8)
-        int healthIndex = Mathf.Clamp(currentHealth, 0, 8);
+        int barsFilled = PlayerHealth.Instance != null ? PlayerHealth.Instance.GetBarsFilled() : 0;
+        // Image index 0 = 0 bars, 5 = 5 bars, 9 = 10 bars (full). So index = min(9, barsFilled).
+        int spriteIndex = Mathf.Min(9, barsFilled);
 
-        // Make sure we have a sprite for this health level
-        if (healthIndex < healthBarSprites.Length && healthBarSprites[healthIndex] != null)
-        {
-            healthBarImage.sprite = healthBarSprites[healthIndex];
-        }
+        if (spriteIndex < lifeBarSprites.Length && lifeBarSprites[spriteIndex] != null)
+            lifeBarImage.sprite = lifeBarSprites[spriteIndex];
         else
-        {
-            Debug.LogWarning($"HealthBarUI: No sprite assigned for health level {healthIndex}!");
-        }
+            Debug.LogWarning($"HealthBarUI: No sprite for bars filled {barsFilled} (index {spriteIndex}).");
     }
 }
