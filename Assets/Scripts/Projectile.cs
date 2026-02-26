@@ -103,11 +103,18 @@ public class Projectile : MonoBehaviour
         Unregister(projectileTypeId);
     }
 
-    /// <summary>Call after instantiate to set direction (and optionally override damage/speed).</summary>
+    /// <summary>Call after instantiate to set direction (and optionally override damage/speed). Projectile will face the same direction it is moving.</summary>
     public void SetDirection(Vector2 direction)
     {
         if (direction.sqrMagnitude > 0.01f)
             moveDirection = direction.normalized;
+
+        // Face the same direction as the shooter (projectile faces its movement direction)
+        Vector3 s = transform.localScale;
+        float faceX = moveDirection.x >= 0.01f ? 1f : (moveDirection.x <= -0.01f ? -1f : 1f);
+        if (Mathf.Abs(moveDirection.x) < 0.01f)
+            faceX = moveDirection.y >= 0f ? 1f : -1f; // mostly vertical: use up/down for facing
+        transform.localScale = new Vector3(faceX * Mathf.Abs(s.x), s.y, s.z);
     }
 
     /// <summary>Optional: initialize direction and optionally damage/speed for one call from spawner.</summary>
@@ -160,6 +167,15 @@ public class Projectile : MonoBehaviour
             var boss = other.GetComponentInParent<BubbleBlumBoss>();
             if (boss != null)
             {
+                // If Bubble Blum's bubble shield is active (slam pattern), projectiles bounce off and do no damage
+                if (boss.isBubbleShieldActive)
+                {
+                    // Reflect horizontally away from the boss for a simple bounce effect
+                    moveDirection = new Vector2(-moveDirection.x, moveDirection.y).normalized;
+                    Debug.Log($"Projectile bounced off shielded Boss '{boss.name}'");
+                    return;
+                }
+
                 Debug.Log($"Projectile dealing {damage} damage to Boss '{boss.name}'");
                 boss.TakeDamage(damage, transform.position, knockbackForceOnEnemy);
                 Impact();

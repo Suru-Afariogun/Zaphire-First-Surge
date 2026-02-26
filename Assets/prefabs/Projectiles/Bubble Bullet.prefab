@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4232113421174007389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 541.32794, y: 237.37212, z: 0}
+  m_LocalPosition: {x: 389.8866, y: 155.62627, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2542657360893026573, guid: 61a00d5bb64482d448e2f8c642f17350, type: 3}
+  m_Sprite: {fileID: 2487788930649249816, guid: 3fd596a3d39f6bc4aab3e3dd6614c640, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -172,9 +172,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   damage: 30
   isPlayerProjectile: 0
+  owner: {fileID: 0}
   knockbackForceOnPlayer: 5
   knockbackForceOnEnemy: 6
-  speed: 40
+  speed: 25
   moveDirection: {x: 1, y: 0}
   maxLifetime: 6
   maxDistance: 15

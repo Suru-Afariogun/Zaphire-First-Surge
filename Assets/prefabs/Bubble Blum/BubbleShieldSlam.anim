@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Projectile temp anim
+  m_Name: BubbleShieldSlam
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 2487788930649249816, guid: 3fd596a3d39f6bc4aab3e3dd6614c640, type: 3}
+      value: {fileID: -806573570271603603, guid: 4e675a41563a19a48972510775b25211, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 2487788930649249816, guid: 3fd596a3d39f6bc4aab3e3dd6614c640, type: 3}
+    - {fileID: -806573570271603603, guid: 4e675a41563a19a48972510775b25211, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

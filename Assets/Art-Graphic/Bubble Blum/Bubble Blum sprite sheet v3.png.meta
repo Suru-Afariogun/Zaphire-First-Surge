@@ -1,0 +1,1651 @@
+fileFormatVersion: 2
+guid: b2bdf21ab9385274db00173e04e5ea88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6717844448583801986
+    second: Bubble Blum sprite sheet v3_0
+  - first:
+      213: 5679143222721850372
+    second: Bubble Blum sprite sheet v3_1
+  - first:
+      213: 990225872111502353
+    second: Bubble Blum sprite sheet v3_2
+  - first:
+      213: 6957814146258498879
+    second: Bubble Blum sprite sheet v3_3
+  - first:
+      213: 2895394556070082436
+    second: Bubble Blum sprite sheet v3_4
+  - first:
+      213: 1470303635858726284
+    second: Bubble Blum sprite sheet v3_5
+  - first:
+      213: 5817568857904987546
+    second: Bubble Blum sprite sheet v3_6
+  - first:
+      213: -8404734000586671743
+    second: Bubble Blum sprite sheet v3_7
+  - first:
+      213: 2714832514648669814
+    second: Bubble Blum sprite sheet v3_8
+  - first:
+      213: -1551938601595938366
+    second: Bubble Blum sprite sheet v3_9
+  - first:
+      213: 400831808029358932
+    second: Bubble Blum sprite sheet v3_10
+  - first:
+      213: 2543560236797127944
+    second: Bubble Blum sprite sheet v3_11
+  - first:
+      213: 4377256679788013431
+    second: Bubble Blum sprite sheet v3_12
+  - first:
+      213: 281609297880197193
+    second: Bubble Blum sprite sheet v3_13
+  - first:
+      213: 390794647714876512
+    second: Bubble Blum sprite sheet v3_14
+  - first:
+      213: -132846920306046889
+    second: Bubble Blum sprite sheet v3_15
+  - first:
+      213: -4235728659805722144
+    second: Bubble Blum sprite sheet v3_16
+  - first:
+      213: -7214061288450063429
+    second: Bubble Blum sprite sheet v3_17
+  - first:
+      213: 1246259579076496024
+    second: Bubble Blum sprite sheet v3_18
+  - first:
+      213: -6564576792554592249
+    second: Bubble Blum sprite sheet v3_19
+  - first:
+      213: 1178778385486124242
+    second: Bubble Blum sprite sheet v3_20
+  - first:
+      213: 6470328994496464047
+    second: Bubble Blum sprite sheet v3_21
+  - first:
+      213: 925400536368751877
+    second: Bubble Blum sprite sheet v3_22
+  - first:
+      213: -6170487757575453039
+    second: Bubble Blum sprite sheet v3_23
+  - first:
+      213: -2782322250659387906
+    second: Bubble Blum sprite sheet v3_24
+  - first:
+      213: -9017682102661292273
+    second: Bubble Blum sprite sheet v3_25
+  - first:
+      213: -4091505444257707110
+    second: Bubble Blum sprite sheet v3_26
+  - first:
+      213: 8546187698145405906
+    second: Bubble Blum sprite sheet v3_27
+  - first:
+      213: 1043375840483049608
+    second: Bubble Blum sprite sheet v3_28
+  - first:
+      213: 4973920648997825907
+    second: Bubble Blum sprite sheet v3_29
+  - first:
+      213: -6017499038475489869
+    second: Bubble Blum sprite sheet v3_30
+  - first:
+      213: 2178870429568806904
+    second: Bubble Blum sprite sheet v3_31
+  - first:
+      213: 5146763235156207724
+    second: Bubble Blum sprite sheet v3_32
+  - first:
+      213: 2033559604000872625
+    second: Bubble Blum sprite sheet v3_33
+  - first:
+      213: 4595130968760891283
+    second: Bubble Blum sprite sheet v3_34
+  - first:
+      213: -6427172105384991104
+    second: Bubble Blum sprite sheet v3_35
+  - first:
+      213: -392595945222075514
+    second: Bubble Blum sprite sheet v3_36
+  - first:
+      213: -8803566523400058487
+    second: Bubble Blum sprite sheet v3_37
+  - first:
+      213: -554982696591648112
+    second: Bubble Blum sprite sheet v3_38
+  - first:
+      213: -8121633959097589552
+    second: Bubble Blum sprite sheet v3_39
+  - first:
+      213: -3158292888438122778
+    second: Bubble Blum sprite sheet v3_40
+  - first:
+      213: 8522129260881129947
+    second: Bubble Blum sprite sheet v3_41
+  - first:
+      213: 8479218954292591777
+    second: Bubble Blum sprite sheet v3_42
+  - first:
+      213: -6413172009436185054
+    second: Bubble Blum sprite sheet v3_43
+  - first:
+      213: -6659282255146829066
+    second: Bubble Blum sprite sheet v3_44
+  - first:
+      213: -4204522694024647923
+    second: Bubble Blum sprite sheet v3_45
+  - first:
+      213: -7405584811693345883
+    second: Bubble Blum sprite sheet v3_46
+  - first:
+      213: -2497415414057995639
+    second: Bubble Blum sprite sheet v3_47
+  - first:
+      213: -3325359513972166867
+    second: Bubble Blum sprite sheet v3_48
+  - first:
+      213: 2272347423931349274
+    second: Bubble Blum sprite sheet v3_49
+  - first:
+      213: -1540520525559466843
+    second: Bubble Blum sprite sheet v3_50
+  - first:
+      213: 1286004360717024942
+    second: Bubble Blum sprite sheet v3_51
+  - first:
+      213: -8036443525149974364
+    second: Bubble Blum sprite sheet v3_52
+  - first:
+      213: -5147655854321158233
+    second: Bubble Blum sprite sheet v3_53
+  - first:
+      213: 3888343538645176604
+    second: Bubble Blum sprite sheet v3_54
+  - first:
+      213: -1404414172098849191
+    second: Bubble Blum sprite sheet v3_55
+  - first:
+      213: -8194886364835707070
+    second: Bubble Blum sprite sheet v3_56
+  - first:
+      213: 4705572780667554727
+    second: Bubble Blum sprite sheet v3_57
+  - first:
+      213: -9019235227035147684
+    second: Bubble Blum sprite sheet v3_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 997
+        width: 449
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 92, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28cda2eeee39a3d50800000000000000
+      internalID: 6717844448583801986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_1
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1301
+        width: 7
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c27e2fbae50de40800000000000000
+      internalID: 5679143222721850372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_2
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 952
+        width: 449
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1148b9a2f2dfdbd00800000000000000
+      internalID: 990225872111502353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_3
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1181
+        width: 7
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35fce81a1f1f8060800000000000000
+      internalID: 6957814146258498879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 965
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487382f12028e2820800000000000000
+      internalID: 2895394556070082436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 960
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d1357ed51976410800000000000000
+      internalID: 1470303635858726284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_6
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 979
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d3dcfad082cb050800000000000000
+      internalID: 5817568857904987546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_7
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 988
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1893267e4f26c5b80800000000000000
+      internalID: -8404734000586671743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_8
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 986
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e705cc9c50da520800000000000000
+      internalID: 2714832514648669814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_9
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 987
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c958aa7018667ae0800000000000000
+      internalID: -1551938601595938366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_10
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 984
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b744cd76a009500800000000000000
+      internalID: 400831808029358932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_11
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 976
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80de91b1f8a8c4320800000000000000
+      internalID: 2543560236797127944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_12
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 952
+        width: 112
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777687132c32fbc30800000000000000
+      internalID: 4377256679788013431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_13
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 836
+        width: 136
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948a8951a2a78e300800000000000000
+      internalID: 281609297880197193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_14
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 906
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c4b2d59a16c6500800000000000000
+      internalID: 390794647714876512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_15
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 644
+        width: 282
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75847a90e68082ef0800000000000000
+      internalID: -132846920306046889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_16
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 946
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9a65bc93ba735c0800000000000000
+      internalID: -4235728659805722144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_17
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 933
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3890ada7182eb90800000000000000
+      internalID: -7214061288450063429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_18
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 915
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a48c4fb7a9b4110800000000000000
+      internalID: 1246259579076496024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_19
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 920
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708a2031030f5e4a0800000000000000
+      internalID: -6564576792554592249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 905
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d41fc732bcdb5010800000000000000
+      internalID: 1178778385486124242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_21
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 852
+        width: 43
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa44fd070f93bc950800000000000000
+      internalID: 6470328994496464047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_22
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 577
+        width: 267
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505273582eea7dc00800000000000000
+      internalID: 925400536368751877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_23
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 574
+        width: 221
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19681deb3160e5aa0800000000000000
+      internalID: -6170487757575453039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_24
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 822
+        width: 37
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef528c687a43369d0800000000000000
+      internalID: -2782322250659387906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_25
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 746
+        width: 141
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0fd975c7e1cad280800000000000000
+      internalID: -9017682102661292273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_26
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 836
+        width: 35
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b4176e97d0837c0800000000000000
+      internalID: -4091505444257707110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_27
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 780
+        width: 89
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db25cb8e682a9670800000000000000
+      internalID: 8546187698145405906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_28
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 808
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88087338cc0da7e00800000000000000
+      internalID: 1043375840483049608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_29
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 673
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37dee703a7ae60540800000000000000
+      internalID: 4973920648997825907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_30
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 769
+        width: 72
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bde96fa18c8d7ca0800000000000000
+      internalID: -6017499038475489869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_31
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 725
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff2d0e8c17ec3e10800000000000000
+      internalID: 2178870429568806904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_32
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 710
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68a686c4e9fc6740800000000000000
+      internalID: 5146763235156207724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_33
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 689
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b85e028fa7a83c10800000000000000
+      internalID: 2033559604000872625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_34
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 730
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397b361254f25cf30800000000000000
+      internalID: 4595130968760891283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_35
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 711
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0866a34d5091ec6a0800000000000000
+      internalID: -6427172105384991104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_36
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 661
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b87c061183d8af0800000000000000
+      internalID: -392595945222075514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_37
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 674
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9890838e3e273d580800000000000000
+      internalID: -8803566523400058487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_38
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 584
+        width: 74
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a9a298d2e4c48f0800000000000000
+      internalID: -554982696591648112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_39
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 654
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d02d38c1f82a4f80800000000000000
+      internalID: -8121633959097589552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_40
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 669
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6d000f95d7b24d0800000000000000
+      internalID: -3158292888438122778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_41
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 635
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd138cc196fa44670800000000000000
+      internalID: 8522129260881129947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_42
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 640
+        width: 95
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac7e5fc6bc3ca570800000000000000
+      internalID: 8479218954292591777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_43
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 639
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ef31e2906dff6a0800000000000000
+      internalID: -6413172009436185054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_44
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 624
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa39e2421a7593a0800000000000000
+      internalID: -6659282255146829066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_45
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 598
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ba794e2e886a5c0800000000000000
+      internalID: -4204522694024647923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_46
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 541
+        width: 66
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a37df8a9d31a3990800000000000000
+      internalID: -7405584811693345883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_47
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 582
+        width: 10
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982fc7ca9e5675dd0800000000000000
+      internalID: -2497415414057995639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_48
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 545
+        width: 11
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f293bf323f9d1d0800000000000000
+      internalID: -3325359513972166867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_49
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 512
+        width: 13
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19b3b151fff88f10800000000000000
+      internalID: 2272347423931349274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_50
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 578
+        width: 8
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a474d87eb8fe9ae0800000000000000
+      internalID: -1540520525559466843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_51
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 589
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae342c072ec8d110800000000000000
+      internalID: 1286004360717024942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_52
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 581
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0a2f95131d87090800000000000000
+      internalID: -8036443525149974364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_53
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 586
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a73a31264adf88b0800000000000000
+      internalID: -5147655854321158233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_54
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 556
+        width: 43
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1191a9d8db26f530800000000000000
+      internalID: 3888343538645176604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_55
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 594
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956168a50c4828ce0800000000000000
+      internalID: -1404414172098849191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_56
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 34
+        width: 388
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2478641054ae54e80800000000000000
+      internalID: -8194886364835707070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_57
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 30
+        width: 302
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abcf68438d8d4140800000000000000
+      internalID: 4705572780667554727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble Blum sprite sheet v3_58
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 67
+        width: 346
+        height: 361
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5261e2d85d35d280800000000000000
+      internalID: -9019235227035147684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 926a9e171e2b3c94c9e6a6c131e8e5f6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bubble Blum sprite sheet v3_0: 6717844448583801986
+      Bubble Blum sprite sheet v3_1: 5679143222721850372
+      Bubble Blum sprite sheet v3_10: 400831808029358932
+      Bubble Blum sprite sheet v3_11: 2543560236797127944
+      Bubble Blum sprite sheet v3_12: 4377256679788013431
+      Bubble Blum sprite sheet v3_13: 281609297880197193
+      Bubble Blum sprite sheet v3_14: 390794647714876512
+      Bubble Blum sprite sheet v3_15: -132846920306046889
+      Bubble Blum sprite sheet v3_16: -4235728659805722144
+      Bubble Blum sprite sheet v3_17: -7214061288450063429
+      Bubble Blum sprite sheet v3_18: 1246259579076496024
+      Bubble Blum sprite sheet v3_19: -6564576792554592249
+      Bubble Blum sprite sheet v3_2: 990225872111502353
+      Bubble Blum sprite sheet v3_20: 1178778385486124242
+      Bubble Blum sprite sheet v3_21: 6470328994496464047
+      Bubble Blum sprite sheet v3_22: 925400536368751877
+      Bubble Blum sprite sheet v3_23: -6170487757575453039
+      Bubble Blum sprite sheet v3_24: -2782322250659387906
+      Bubble Blum sprite sheet v3_25: -9017682102661292273
+      Bubble Blum sprite sheet v3_26: -4091505444257707110
+      Bubble Blum sprite sheet v3_27: 8546187698145405906
+      Bubble Blum sprite sheet v3_28: 1043375840483049608
+      Bubble Blum sprite sheet v3_29: 4973920648997825907
+      Bubble Blum sprite sheet v3_3: 6957814146258498879
+      Bubble Blum sprite sheet v3_30: -6017499038475489869
+      Bubble Blum sprite sheet v3_31: 2178870429568806904
+      Bubble Blum sprite sheet v3_32: 5146763235156207724
+      Bubble Blum sprite sheet v3_33: 2033559604000872625
+      Bubble Blum sprite sheet v3_34: 4595130968760891283
+      Bubble Blum sprite sheet v3_35: -6427172105384991104
+      Bubble Blum sprite sheet v3_36: -392595945222075514
+      Bubble Blum sprite sheet v3_37: -8803566523400058487
+      Bubble Blum sprite sheet v3_38: -554982696591648112
+      Bubble Blum sprite sheet v3_39: -8121633959097589552
+      Bubble Blum sprite sheet v3_4: 2895394556070082436
+      Bubble Blum sprite sheet v3_40: -3158292888438122778
+      Bubble Blum sprite sheet v3_41: 8522129260881129947
+      Bubble Blum sprite sheet v3_42: 8479218954292591777
+      Bubble Blum sprite sheet v3_43: -6413172009436185054
+      Bubble Blum sprite sheet v3_44: -6659282255146829066
+      Bubble Blum sprite sheet v3_45: -4204522694024647923
+      Bubble Blum sprite sheet v3_46: -7405584811693345883
+      Bubble Blum sprite sheet v3_47: -2497415414057995639
+      Bubble Blum sprite sheet v3_48: -3325359513972166867
+      Bubble Blum sprite sheet v3_49: 2272347423931349274
+      Bubble Blum sprite sheet v3_5: 1470303635858726284
+      Bubble Blum sprite sheet v3_50: -1540520525559466843
+      Bubble Blum sprite sheet v3_51: 1286004360717024942
+      Bubble Blum sprite sheet v3_52: -8036443525149974364
+      Bubble Blum sprite sheet v3_53: -5147655854321158233
+      Bubble Blum sprite sheet v3_54: 3888343538645176604
+      Bubble Blum sprite sheet v3_55: -1404414172098849191
+      Bubble Blum sprite sheet v3_56: -8194886364835707070
+      Bubble Blum sprite sheet v3_57: 4705572780667554727
+      Bubble Blum sprite sheet v3_58: -9019235227035147684
+      Bubble Blum sprite sheet v3_6: 5817568857904987546
+      Bubble Blum sprite sheet v3_7: -8404734000586671743
+      Bubble Blum sprite sheet v3_8: 2714832514648669814
+      Bubble Blum sprite sheet v3_9: -1551938601595938366
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

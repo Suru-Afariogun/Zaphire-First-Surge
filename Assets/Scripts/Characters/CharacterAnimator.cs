@@ -95,6 +95,24 @@ public class CharacterAnimator : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Fire a trigger by name. Used by bosses (e.g. Bubble Blum) for custom animation triggers
+    /// like BubbleShotCharge, BubbleShieldSlam, etc. No-op if the Animator has no parameter with that name.
+    /// </summary>
+    public void TriggerByName(string triggerName)
+    {
+        if (anim == null)
+        {
+            Debug.LogWarning($"[CharacterAnimator] TriggerByName(\"{triggerName}\"): Animator is null.");
+            return;
+        }
+        bool found = SetTriggerSafe(anim, triggerName);
+        if (found)
+            Debug.Log($"[CharacterAnimator] Trigger set: \"{triggerName}\"");
+        else
+            Debug.LogWarning($"[CharacterAnimator] TriggerByName(\"{triggerName}\"): No Trigger parameter with this name on Animator. Add \"{triggerName}\" (Trigger) to the Animator.");
+    }
+
     public void TriggerDash()
     {
         if (anim == null) return;
@@ -240,6 +258,31 @@ public class CharacterAnimator : MonoBehaviour
         if (anim == null) return;
         SetBoolSafe(anim, "IsChargingPowerCore", isCharging);
         SetFloatSafe(anim, "PowerCoreChargeProgress", Mathf.Clamp01(chargeProgress));
+    }
+
+    // -----------------------------
+    // BOSS-SPECIFIC (Bubble Blum) HELPERS
+    // -----------------------------
+
+    /// <summary>Sets IsChargingBubbleShot (used while BubbleShotCharge is playing).</summary>
+    public void SetBubbleShotCharging(bool isCharging)
+    {
+        if (anim == null) return;
+        SetBoolSafe(anim, "IsChargingBubbleShot", isCharging);
+    }
+
+    /// <summary>Sets IsBubbleShieldActive (true during the full shield slam pattern).</summary>
+    public void SetBubbleShieldActive(bool isActive)
+    {
+        if (anim == null) return;
+        SetBoolSafe(anim, "IsBubbleShieldActive", isActive);
+    }
+
+    /// <summary>Optional: sets IsBubbleJumping for bubble-style jumps (jump-chase, shield jumps).</summary>
+    public void SetBubbleJumping(bool isJumpingBubble)
+    {
+        if (anim == null) return;
+        SetBoolSafe(anim, "IsBubbleJumping", isJumpingBubble);
     }
 
         // Commented out for now - going for snappy, instant recovery rather than smooth recovery animations

@@ -85,9 +85,9 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2542657360893026573, guid: 61a00d5bb64482d448e2f8c642f17350, type: 3}
+  m_Sprite: {fileID: 2541207891662296272, guid: ebf5029a5c821214eaa2baad388e2412, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.99, y: 0.9900796}
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   damage: 5
   isPlayerProjectile: 0
+  owner: {fileID: 0}
   knockbackForceOnPlayer: 5
   knockbackForceOnEnemy: 6
   speed: 40
