@@ -347,8 +347,9 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void TryLightAttack()
     {
-        // Prevent attack if still on cooldown or an ability is already playing
-        if (attackTimer > 0f || isAttacking) 
+        // Prevent attack if still on cooldown. We intentionally DO NOT block on isAttacking
+        // so the player can fire multiple projectiles rapidly while the light-attack animation is playing.
+        if (attackTimer > 0f) 
             return;
         
         // Start ability

@@ -118,6 +118,10 @@ public class BubbleBlumBoss : MonoBehaviour
     [Tooltip("Vertical height (units) of the final bounce after the last slam, before BubbleShieldPop.")]
     public float finalSlamBounceHeight = 3f;
 
+    [Header("Bubble Shield Break")]
+    [Tooltip("Number of player projectiles that must hit the bubble shield to break it early.")]
+    public int bubbleShieldHitsToBreak = 6;
+
     // internal
     private Transform player;
     private Rigidbody2D rb;
@@ -143,10 +147,12 @@ public class BubbleBlumBoss : MonoBehaviour
     private bool isPerformingPattern = false;
     private float bigBubbleCooldownTimer = 0f;
     private float slamCooldownTimer = 0f;
-    // Shield / pattern state (used so projectiles can bounce off during slam pattern, and so Big Bubble can be cancelled)
+    // Shield / pattern state (used so projectiles can bounce off during slam pattern, shield break, and Big Bubble cancel)
     [HideInInspector] public bool isBubbleShieldActive = false;
     private bool isChargingBigBubble = false;
     private bool cancelBigBubbleToSlam = false;
+    private int bubbleShieldHitCount = 0;
+    private bool isBreakingBubbleShield = false;
     private bool lastSlamShockwaveHitPlayer = false;
 
     // player find retry
@@ -456,6 +462,8 @@ public class BubbleBlumBoss : MonoBehaviour
         isBubbleShieldActive = true;
         characterAnimator?.SetBubbleShieldActive(true);
         characterAnimator?.SetGrounded(false);
+        bubbleShieldHitCount = 0;
+        isBreakingBubbleShield = false;
 
         float g = Mathf.Abs(Physics2D.gravity.y);
         if (g < 0.1f) g = 20f;
@@ -515,6 +523,10 @@ public class BubbleBlumBoss : MonoBehaviour
             characterAnimator?.SetGrounded(true);
             DealSlamShockwaveDamage();
 
+            // If the shield is being broken early, exit the pattern now (BreakBubbleShieldEarly handles the pop)
+            if (isBreakingBubbleShield)
+                yield break;
+
             // If this slam's shockwave actually hit the player, bounce off and land slamBounceAwayDistance units away
             if (lastSlamShockwaveHitPlayer)
             {
@@ -539,16 +551,20 @@ public class BubbleBlumBoss : MonoBehaviour
         // Final bounce off the ground before the pop
         yield return StartCoroutine(BounceUpBeforePop());
 
-        Debug.Log("[BubbleBlumBoss] ShieldSlam: BubbleShieldPop (final shockwave)");
-        characterAnimator?.TriggerByName("BubbleShieldPop");
-        // Let the pop animation/effect play for bubbleShieldPopDuration seconds, then apply the shockwave
-        yield return new WaitForSeconds(bubbleShieldPopDuration);
-        DealPopShockwaveDamage();
-        slamCooldownTimer = slamCooldown;
-        isBubbleShieldActive = false;
-        characterAnimator?.SetBubbleShieldActive(false);
-        characterAnimator?.SetBubbleJumping(false);
-        isAttacking = false;
+        // If the shield was already broken early, ShieldSlamPattern exits without playing pop again.
+        if (!isBreakingBubbleShield)
+        {
+            Debug.Log("[BubbleBlumBoss] ShieldSlam: BubbleShieldPop (final shockwave)");
+            characterAnimator?.TriggerByName("BubbleShieldPop");
+            // Let the pop animation/effect play for bubbleShieldPopDuration seconds, then apply the shockwave
+            yield return new WaitForSeconds(bubbleShieldPopDuration);
+            DealPopShockwaveDamage();
+            slamCooldownTimer = slamCooldown;
+            isBubbleShieldActive = false;
+            characterAnimator?.SetBubbleShieldActive(false);
+            characterAnimator?.SetBubbleJumping(false);
+            isAttacking = false;
+        }
     }
 
     void DealSlamShockwaveDamage()
@@ -580,6 +596,40 @@ public class BubbleBlumBoss : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void OnShieldHitByProjectile()
+    {
+        if (!isBubbleShieldActive || bubbleShieldHitsToBreak <= 0) return;
+        bubbleShieldHitCount++;
+        if (bubbleShieldHitCount >= bubbleShieldHitsToBreak)
+        {
+            // Trigger forced shield break if not already breaking
+            if (!isBreakingBubbleShield)
+            {
+                StartCoroutine(BreakBubbleShieldEarly());
+            }
+        }
+    }
+
+    IEnumerator BreakBubbleShieldEarly()
+    {
+        if (!isBubbleShieldActive || isBreakingBubbleShield) yield break;
+        isBreakingBubbleShield = true;
+
+        Debug.Log("[BubbleBlumBoss] Bubble shield broken early by player projectiles. Forcing BubbleShieldPop.");
+
+        // Immediately play BubbleShieldPop from current position
+        characterAnimator?.TriggerByName("BubbleShieldPop");
+
+        yield return new WaitForSeconds(bubbleShieldPopDuration);
+        DealPopShockwaveDamage();
+        slamCooldownTimer = slamCooldown;
+        isBubbleShieldActive = false;
+        characterAnimator?.SetBubbleShieldActive(false);
+        characterAnimator?.SetBubbleJumping(false);
+        isAttacking = false;
+        isBreakingBubbleShield = false;
     }
 
     IEnumerator BounceOffPlayerFromSlam()

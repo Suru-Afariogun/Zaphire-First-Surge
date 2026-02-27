@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2273871421563604008}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.12, y: -0.4, z: 0}
+  m_LocalPosition: {x: 0.689, y: -0.333, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -220,7 +220,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 9
+  moveSpeed: 10
   jumpForce: 50
   fallMultiplier: 5
   groundCheckRadius: 0.8
@@ -231,8 +231,8 @@ MonoBehaviour:
   attackCooldown: 0
   lightAttackProjectilePrefab: {fileID: 2801636139909453805, guid: 2231fa5debf24e4478c72132c4f9f3e9, type: 3}
   projectileFirePoint: {fileID: 879548081328515302}
-  healingCoreHoldDuration: 3
-  powerCoreHoldDuration: 3
+  healingCoreHoldDuration: 1.5
+  powerCoreHoldDuration: 1.5
 --- !u!95 &7473531857077365538
 Animator:
   serializedVersion: 7

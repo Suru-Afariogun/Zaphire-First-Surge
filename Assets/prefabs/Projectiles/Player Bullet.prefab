@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 5745967112465504807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 543.5736, y: 235.9934, z: 0}
-  m_LocalScale: {x: 0.54308546, y: 0.60143334, z: 1}
+  m_LocalPosition: {x: 544.8787, y: 234.8836, z: 0}
+  m_LocalScale: {x: 0.27750802, y: 0.2807171, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2541207891662296272, guid: ebf5029a5c821214eaa2baad388e2412, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.99, y: 0.9900796}
@@ -177,10 +177,10 @@ MonoBehaviour:
   knockbackForceOnEnemy: 6
   speed: 40
   moveDirection: {x: 1, y: 0}
-  maxLifetime: 3
+  maxLifetime: 0
   maxDistance: 15
   projectileTypeId: Player Bullet
-  maxOnScreen: 4
+  maxOnScreen: 2
   animator: {fileID: 452510006390091892}
   triggerFiredProjectile: FiredProjectile
   triggerAirborneProjectile: AirborneProjectile

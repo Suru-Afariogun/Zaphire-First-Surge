@@ -167,9 +167,13 @@ public class Projectile : MonoBehaviour
             var boss = other.GetComponentInParent<BubbleBlumBoss>();
             if (boss != null)
             {
-                // If Bubble Blum's bubble shield is active (slam pattern), projectiles bounce off and do no damage
+                // If Bubble Blum's bubble shield is active (slam pattern), projectiles hit the shield:
+                // - They bounce off
+                // - They don't damage the boss
+                // - They count toward breaking the shield early
                 if (boss.isBubbleShieldActive)
                 {
+                    boss.OnShieldHitByProjectile();
                     // Reflect horizontally away from the boss for a simple bounce effect
                     moveDirection = new Vector2(-moveDirection.x, moveDirection.y).normalized;
                     Debug.Log($"Projectile bounced off shielded Boss '{boss.name}'");
