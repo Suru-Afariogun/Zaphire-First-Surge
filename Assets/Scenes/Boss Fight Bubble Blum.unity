@@ -119,6 +119,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &5613040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5613041}
+  - component: {fileID: 5613043}
+  - component: {fileID: 5613042}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5613041
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5613040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1321918995}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 424, y: -392}
+  m_SizeDelta: {x: 1286.317, y: 138.093}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5613042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5613040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6695802582353234869, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &5613043
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5613040}
+  m_CullTransparentMesh: 1
 --- !u!1 &14224779
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +650,7 @@ MonoBehaviour:
   selectedCombatStyle: 
   CombatStylePrefabs:
   - {fileID: 4449590928875546672, guid: 364c9d836b086eb49bd7c626a88b92af, type: 3}
+  gameOverPopupPrefab: {fileID: 9111151572799255123, guid: 4d252faf885edc2449477e5a5ca0fcd4, type: 3}
   currentLives: 3
   currentSceneName: 
 --- !u!4 &120029390
@@ -3717,6 +3793,7 @@ RectTransform:
   - {fileID: 946209817}
   - {fileID: 1924008517}
   - {fileID: 940545650}
+  - {fileID: 1321918995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5663,6 +5740,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 661477522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1321918994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1321918995}
+  - component: {fileID: 1321918996}
+  m_Layer: 5
+  m_Name: Boss Life Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1321918995
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321918994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5613041}
+  m_Father: {fileID: 679457398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1321918996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321918994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6090081f05f25a449ae01dc88657579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossHealthBarUI
+  lifeBarSprites:
+  - {fileID: -7254419006496699054, guid: 85395c485e3e62b4aa1499cd50487914, type: 3}
+  - {fileID: -2946269596290595615, guid: 85395c485e3e62b4aa1499cd50487914, type: 3}
+  - {fileID: 2056360687704256552, guid: 85395c485e3e62b4aa1499cd50487914, type: 3}
+  - {fileID: 454358809102156752, guid: 85395c485e3e62b4aa1499cd50487914, type: 3}
+  - {fileID: 1691182456865485456, guid: 85395c485e3e62b4aa1499cd50487914, type: 3}
+  - {fileID: 4298457726849306927, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: 7405697064609032577, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: -8443468018102577994, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: 4288980212622745822, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: 224038399943582255, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: 426323159572967770, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: 8155136645050163875, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: 5323795552122980471, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: 1358141475000549370, guid: 6abdfb0a46c4d614a99621bdc570b8e5, type: 3}
+  - {fileID: -3266021342750815894, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  - {fileID: 1665173264980991978, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  - {fileID: 3310864865070105165, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  - {fileID: -5526161405147763289, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  - {fileID: -8693526240904837297, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  - {fileID: -3415356594964482947, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  - {fileID: -3036160746950043751, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  - {fileID: -7612170263525400056, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  - {fileID: -6695802582353234869, guid: d9e4413cac008f9439d4be318f6ca3b9, type: 3}
+  lifeBarImage: {fileID: 5613042}
+  boss: {fileID: 1785713889}
+  damageFlashColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.12
+  damageShakeAmplitude: 5
+  damageShakeDuration: 0.15
 --- !u!1 &1345503407
 GameObject:
   m_ObjectHideFlags: 0
@@ -6355,6 +6511,10 @@ MonoBehaviour:
   - {fileID: 4574389853717104566, guid: 61a00d5bb64482d448e2f8c642f17350, type: 3}
   - {fileID: -5804754667617451585, guid: 61a00d5bb64482d448e2f8c642f17350, type: 3}
   lifeBarImage: {fileID: 2083453564}
+  healFlashColor: {r: 0, g: 1, b: 0, a: 1}
+  healFlashDuration: 0.2
+  damageShakeAmplitude: 5
+  damageShakeDuration: 0.15
 --- !u!1 &1460839398
 GameObject:
   m_ObjectHideFlags: 0
@@ -6674,7 +6834,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 10.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6718,8 +6878,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 0}
-  offset: {x: 0, y: 0, z: -10}
+  offset: {x: 0, y: 3, z: -10}
   smoothTime: 0.15
+  smallShakeDuration: 0.15
+  smallShakeAmplitude: 0.1
 --- !u!1 &1561516991
 GameObject:
   m_ObjectHideFlags: 0
@@ -7633,6 +7795,8 @@ MonoBehaviour:
   bigBubbleCooldown: 3
   slamCooldown: 4
   slamChanceWhenBothReady: 0.5
+  minBubbleShotsPerPattern: 1
+  maxBubbleShotsPerPattern: 3
   bigBubbleTelegraphDelay: 0.5
   shockwaveRadius: 5
   shockwaveDamage: 8
@@ -7650,6 +7814,7 @@ MonoBehaviour:
   slamBounceAwayDistance: 7
   slamBounceHeight: 5
   finalSlamBounceHeight: 0.3
+  bubbleShieldHitsToBreak: 6
   isBubbleShieldActive: 0
 --- !u!50 &1785713890
 Rigidbody2D:
@@ -8195,6 +8360,8 @@ MonoBehaviour:
   - {fileID: 940545651}
   healPerCore: 20
   powerUpPercent: 0.15
+  coreShakeAmplitude: 5
+  coreShakeFrequency: 25
 --- !u!4 &1867205044
 Transform:
   m_ObjectHideFlags: 0

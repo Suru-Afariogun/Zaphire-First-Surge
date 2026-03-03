@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     public string selectedCombatStyle;
     public GameObject[] CombatStylePrefabs; // assign in Inspector
 
+    [Header("Global UI Prefabs")]
+    [Tooltip("Game Over popup prefab. Will be instantiated once and marked DontDestroyOnLoad so all gameplay scenes can use it.")]
+    public GameObject gameOverPopupPrefab;
+
     /// <summary>Current lives in this play session; used when saving and restored when loading a slot.</summary>
     public int currentLives = DefaultLives;
 
@@ -34,6 +38,16 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        // Spawn the global Game Over popup once, if a prefab is assigned and one doesn't already exist
+        if (gameOverPopupPrefab != null && FindObjectOfType<GameOverPopupUI>() == null)
+        {
+            GameObject popup = Instantiate(gameOverPopupPrefab);
+            DontDestroyOnLoad(popup);
         }
     }
 

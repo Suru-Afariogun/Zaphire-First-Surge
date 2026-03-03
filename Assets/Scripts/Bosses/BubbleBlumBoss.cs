@@ -155,6 +155,10 @@ public class BubbleBlumBoss : MonoBehaviour
     private bool isBreakingBubbleShield = false;
     private bool lastSlamShockwaveHitPlayer = false;
 
+    // Public read-only accessors for UI (boss health bar)
+    public int CurrentHealth => currentHealth;
+    public int MaxHealth => maxHealth;
+
     // player find retry
     private float findRetryInterval = 0.5f;
     private float findRetryTimer = 0f;

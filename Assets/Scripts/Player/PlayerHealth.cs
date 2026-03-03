@@ -98,6 +98,10 @@ public class PlayerHealth : MonoBehaviour
 
         PlayDamageFlicker();
 
+        // Small camera shake when the player is hit
+        if (CameraFollow.Instance != null)
+            CameraFollow.Instance.ShakeSmall();
+
         // Knockback away from hit source
         float force = knockbackForce > 0f ? knockbackForce : defaultKnockbackForce;
         if (force > 0f && rb != null && hitFromPosition != default)

@@ -419,7 +419,14 @@ public class PlayerController : MonoBehaviour
         isHoldingHealingCore = true;
         isChargingHealingCore = true;
         healingCoreHoldTimer = 0f;
-        
+
+        // Small camera shake at the start of HealingCore charge
+        if (CameraFollow.Instance != null)
+            CameraFollow.Instance.ShakeSmall();
+        // Start shaking the active core icon
+        if (CoreManager.Instance != null)
+            CoreManager.Instance.SetActiveCoreShaking(true);
+
         Debug.Log("Started charging HealingCore...");
     }
 
@@ -436,6 +443,9 @@ public class PlayerController : MonoBehaviour
         }
         
         isHoldingHealingCore = false;
+        // Stop shaking core icon on cancel
+        if (CoreManager.Instance != null)
+            CoreManager.Instance.SetActiveCoreShaking(false);
     }
 
     /// <summary>
@@ -450,7 +460,14 @@ public class PlayerController : MonoBehaviour
         isHoldingPowerCore = true;
         isChargingPowerCore = true;
         powerCoreHoldTimer = 0f;
-        
+
+        // Small camera shake at the start of PowerCore charge
+        if (CameraFollow.Instance != null)
+            CameraFollow.Instance.ShakeSmall();
+        // Start shaking the active core icon
+        if (CoreManager.Instance != null)
+            CoreManager.Instance.SetActiveCoreShaking(true);
+
         Debug.Log("Started charging PowerCore...");
     }
 
@@ -467,6 +484,9 @@ public class PlayerController : MonoBehaviour
         }
         
         isHoldingPowerCore = false;
+        // Stop shaking core icon on cancel
+        if (CoreManager.Instance != null)
+            CoreManager.Instance.SetActiveCoreShaking(false);
     }
 
     /// <summary>
@@ -549,6 +569,13 @@ public class PlayerController : MonoBehaviour
             PlayerHealth.Instance.PlayHealingCoreFlicker();
         Debug.Log("HealingCore activated!");
 
+        // Small camera shake at the end of a successful charge
+        if (CameraFollow.Instance != null)
+            CameraFollow.Instance.ShakeSmall();
+        // Stop shaking the active core icon
+        if (CoreManager.Instance != null)
+            CoreManager.Instance.SetActiveCoreShaking(false);
+
         // Duration can be tweaked based on your animation length
         Invoke(nameof(EndAttack), 0.7f);
     }
@@ -583,6 +610,13 @@ public class PlayerController : MonoBehaviour
         if (PlayerHealth.Instance != null)
             PlayerHealth.Instance.PlayPowerCoreFlicker();
         Debug.Log("PowerCore activated!");
+
+        // Small camera shake at the end of a successful charge
+        if (CameraFollow.Instance != null)
+            CameraFollow.Instance.ShakeSmall();
+        // Stop shaking the active core icon
+        if (CoreManager.Instance != null)
+            CoreManager.Instance.SetActiveCoreShaking(false);
 
         Invoke(nameof(EndAttack), 0.7f);
     }

@@ -24,6 +24,12 @@ public class CoreManager : MonoBehaviour
     [Tooltip("Max number of power-ups (each consumes 1 core).")]
     public const int MaxPowerLevel = 5;
 
+    [Header("Core Shake Settings")]
+    [Tooltip("Horizontal/vertical shake amplitude for a core icon while it is being charged.")]
+    public float coreShakeAmplitude = 5f;
+    [Tooltip("Frequency of the shake motion for a charging core icon.")]
+    public float coreShakeFrequency = 25f;
+
     private int corePoints = 0;
     private int powerLevel = 0;
 
@@ -130,5 +136,22 @@ public class CoreManager : MonoBehaviour
             int pointsNeededForThisCore = (i + 1) * 2;
             cores[i].SetCharged(corePoints >= pointsNeededForThisCore);
         }
+    }
+
+    /// <summary>
+    /// Enables or disables shaking on the core that is effectively being "used" (rightmost charged core).
+    /// Called while a core-based ability is charging (HealingCore or PowerCore).
+    /// </summary>
+    public void SetActiveCoreShaking(bool shaking)
+    {
+        int chargedCores = GetChargedCores();
+        if (chargedCores <= 0) return;
+
+        int activeIndex = chargedCores - 1; // rightmost charged core
+        if (activeIndex < 0 || activeIndex >= cores.Length) return;
+
+        var coreUI = cores[activeIndex];
+        if (coreUI != null)
+            coreUI.SetShaking(shaking, coreShakeAmplitude, coreShakeFrequency);
     }
 }
