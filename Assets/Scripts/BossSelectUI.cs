@@ -57,7 +57,7 @@ public class BossSelectUI : MonoBehaviour
         }
 
         Debug.Log("Loading boss fight: " + sceneName);
-        SceneManager.LoadScene(sceneName);
+        ScreenFader.LoadScene(sceneName);
     }
 
     /// <summary>
@@ -79,7 +79,7 @@ public class BossSelectUI : MonoBehaviour
     /// </summary>
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene(mainMenuSceneName);
+        ScreenFader.LoadScene(mainMenuSceneName);
     }
 
     /// <summary>
@@ -87,6 +87,6 @@ public class BossSelectUI : MonoBehaviour
     /// </summary>
     public void GoToSaveSelect()
     {
-        SceneManager.LoadScene(saveSelectSceneName);
+        ScreenFader.LoadScene(saveSelectSceneName);
     }
 }

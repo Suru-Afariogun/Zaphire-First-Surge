@@ -890,7 +890,10 @@ MonoBehaviour:
   selectedCombatStyle: 
   CombatStylePrefabs:
   - {fileID: 4449590928875546672, guid: 364c9d836b086eb49bd7c626a88b92af, type: 3}
-  gameOverPopupPrefab: {fileID: 9111151572799255123, guid: 4d252faf885edc2449477e5a5ca0fcd4, type: 3}
+  gameOverPopupPrefab: {fileID: 2426545818996130557, guid: e3cebcceb0bf7ab4384c4a5e2c3a4f61, type: 3}
+  gameOverCanvasName: Game Over Canvas
+  pausePopupPrefab: {fileID: 4668981586548408773, guid: baec8f5bb98aaab46bbafda8f7d0d35f, type: 3}
+  pauseCanvasName: Pause Canvas
   currentLives: 3
   currentSceneName: 
 --- !u!4 &1697291831

@@ -59,7 +59,7 @@ public class BossHealthBarUI : MonoBehaviour
         if (lifeBarImage == null) return;
 
         if (boss == null)
-            boss = FindObjectOfType<BubbleBlumBoss>();
+            boss = Object.FindFirstObjectByType<BubbleBlumBoss>();
         if (boss == null) return;
 
         int current = boss.CurrentHealth;

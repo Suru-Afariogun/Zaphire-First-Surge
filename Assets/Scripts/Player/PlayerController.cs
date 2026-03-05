@@ -102,8 +102,12 @@ public class PlayerController : MonoBehaviour
         controls.Player.PowerCore.started += ctx => StartChargingPowerCore();
         controls.Player.PowerCore.canceled += ctx => CancelChargingPowerCore();
         
-        // Combat Style Menu (weapon select wheel style)
-        controls.Player.CombatStyleMenu.performed += ctx => ToggleCombatStyleMenu();
+        // Combat Style Menu button is currently used to toggle the Pause popup.
+        controls.Player.CombatStyleMenu.performed += ctx =>
+        {
+            if (PausePopupUI.Instance != null)
+                PausePopupUI.Instance.TogglePause();
+        };
         
         // Combat Style Cycling (left/right triggers)
         controls.Player.CombatStyleLeft.performed += ctx => CycleCombatStylePrevious();
@@ -113,16 +117,10 @@ public class PlayerController : MonoBehaviour
         // No separate input action needed - detected in Update() via combo
     }
 
-    /// <summary>
-    /// Enables input when object becomes active. Only enables if game isn't paused.
-    /// </summary>
     void OnEnable()
     {
-        // Only enable controls if game isn't paused
-        if (!PauseMenu.isPaused)
-        {
-            controls.Player.Enable();
-        }
+        // Always enable the Player action map; gameplay is gated in Update when paused.
+        controls.Player.Enable();
     }
 
     /// <summary>
@@ -147,22 +145,9 @@ public class PlayerController : MonoBehaviour
     // UPDATE LOOP (Runs every frame)
     // ============================================
     
-    /// <summary>
-    /// Handles pause menu input blocking. Runs after Update().
-    /// This ensures pause state is checked after all other updates.
-    /// </summary>
     void LateUpdate()
     {
-        // Disable player input when paused
-        if (PauseMenu.isPaused && controls.Player.enabled)
-        {
-            controls.Player.Disable();
-        }
-        // Re-enable player input when unpaused
-        else if (!PauseMenu.isPaused && !controls.Player.enabled)
-        {
-            controls.Player.Enable();
-        }
+        // Pause behavior is handled by PausePopupUI + Time.timeScale.
     }
 
     /// <summary>
@@ -170,6 +155,10 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Update()
     {
+        // Skip gameplay updates while the game is paused (via Pause popup or Game Over)
+        if (Time.timeScale == 0f)
+            return;
+
         // Count down attack cooldown timer
         if (attackTimer > 0f) 
             attackTimer -= Time.deltaTime;
@@ -698,8 +687,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void ToggleCombatStyleMenu()
     {
-        // Don't toggle if paused
-        if (PauseMenu.isPaused) return;
+        // Don't toggle if paused/game over
+        if (Time.timeScale == 0f) return;
 
         if (CombatStyleMenu.Instance != null)
         {
@@ -717,8 +706,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void CycleCombatStylePrevious()
     {
-        // Don't cycle if paused
-        if (PauseMenu.isPaused) return;
+        // Don't cycle if paused/game over
+        if (Time.timeScale == 0f) return;
 
         // Check if GameManager exists before using it
         if (GameManager.Instance == null)
@@ -739,8 +728,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void CycleCombatStyleNext()
     {
-        // Don't cycle if paused
-        if (PauseMenu.isPaused) return;
+        // Don't cycle if paused/game over
+        if (Time.timeScale == 0f) return;
 
         // Check if GameManager exists before using it
         if (GameManager.Instance == null)

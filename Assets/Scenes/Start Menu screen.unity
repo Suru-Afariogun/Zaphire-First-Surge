@@ -596,7 +596,12 @@ MonoBehaviour:
   selectedSaveFile: 
   selectedBoss: 
   selectedCombatStyle: 
-  CombatStylePrefabs: []
+  CombatStylePrefabs:
+  - {fileID: 4449590928875546672, guid: 364c9d836b086eb49bd7c626a88b92af, type: 3}
+  gameOverPopupPrefab: {fileID: 2426545818996130557, guid: e3cebcceb0bf7ab4384c4a5e2c3a4f61, type: 3}
+  gameOverCanvasName: Game Over Canvas
+  pausePopupPrefab: {fileID: 4668981586548408773, guid: baec8f5bb98aaab46bbafda8f7d0d35f, type: 3}
+  pauseCanvasName: Pause Canvas
   currentLives: 3
   currentSceneName: 
 --- !u!4 &800347627
@@ -1103,7 +1108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8769e7ba7ebda43bc2d02cf51a12a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuPrefab: {fileID: 8577849866528171701, guid: 4843c12854b55af4c910efb4ae2ad2ac, type: 3}
 --- !u!4 &1976471900
 Transform:
   m_ObjectHideFlags: 0

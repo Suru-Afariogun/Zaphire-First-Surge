@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,8 +17,15 @@ public class GameManager : MonoBehaviour
     public GameObject[] CombatStylePrefabs; // assign in Inspector
 
     [Header("Global UI Prefabs")]
-    [Tooltip("Game Over popup prefab. Will be instantiated once and marked DontDestroyOnLoad so all gameplay scenes can use it.")]
+    [Tooltip("Game Over popup prefab (the panel only — no Canvas). Spawned as a child of the scene's Game Over Canvas.")]
     public GameObject gameOverPopupPrefab;
+    [Tooltip("Name of the Canvas in each gameplay scene that should hold the Game Over popup. Create a Canvas with this name in boss fight (and other) scenes.")]
+    public string gameOverCanvasName = "Game Over Canvas";
+
+    [Tooltip("Pause popup prefab (the panel only — no Canvas). Spawned as a child of the scene's Pause Canvas in gameplay scenes.")]
+    public GameObject pausePopupPrefab;
+    [Tooltip("Name of the Canvas in each gameplay scene that should hold the Pause popup.")]
+    public string pauseCanvasName = "Pause Canvas";
 
     /// <summary>Current lives in this play session; used when saving and restored when loading a slot.</summary>
     public int currentLives = DefaultLives;
@@ -41,14 +49,87 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     private void Start()
     {
-        // Spawn the global Game Over popup once, if a prefab is assigned and one doesn't already exist
-        if (gameOverPopupPrefab != null && FindObjectOfType<GameOverPopupUI>() == null)
+        // Also run once for the very first scene after GameManager is created.
+        TrySpawnGameOverPopupForCurrentScene();
+        TrySpawnPausePopupForCurrentScene();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        TrySpawnGameOverPopupForCurrentScene();
+        TrySpawnPausePopupForCurrentScene();
+    }
+
+    /// <summary>
+    /// Spawns the Game Over popup under this scene's "Game Over Canvas" (no Canvas in the prefab).
+    /// Called on Start (for first scene) and on every sceneLoaded.
+    /// </summary>
+    private void TrySpawnGameOverPopupForCurrentScene()
+    {
+        var existing = Object.FindFirstObjectByType<GameOverPopupUI>();
+        if (gameOverPopupPrefab == null || existing != null) return;
+
+        GameObject canvasGO = GameObject.Find(gameOverCanvasName);
+        if (canvasGO == null)
         {
-            GameObject popup = Instantiate(gameOverPopupPrefab);
-            DontDestroyOnLoad(popup);
+            Debug.LogWarning("[GameManager] No GameObject named \"" + gameOverCanvasName + "\" in this scene. Add a Canvas with that name to show the Game Over popup.");
+            return;
         }
+
+        GameObject popup = Instantiate(gameOverPopupPrefab, canvasGO.transform, false);
+
+        RectTransform popupRect = popup.GetComponent<RectTransform>();
+        if (popupRect != null)
+        {
+            popupRect.anchorMin = Vector2.zero;
+            popupRect.anchorMax = Vector2.one;
+            popupRect.offsetMin = Vector2.zero;
+            popupRect.offsetMax = Vector2.zero;
+        }
+
+        Debug.Log("[GameManager] Game Over popup instantiated under " + gameOverCanvasName + ".");
+    }
+
+    /// <summary>
+    /// Spawns the Pause popup under this scene's "Pause Canvas" (no Canvas in the prefab).
+    /// Called on Start (for first scene) and on every sceneLoaded.
+    /// </summary>
+    private void TrySpawnPausePopupForCurrentScene()
+    {
+        var existing = Object.FindFirstObjectByType<PausePopupUI>();
+        if (pausePopupPrefab == null || existing != null) return;
+
+        GameObject canvasGO = GameObject.Find(pauseCanvasName);
+        if (canvasGO == null)
+        {
+            Debug.LogWarning("[GameManager] No GameObject named \"" + pauseCanvasName + "\" in this scene. Add a Canvas with that name to show the Pause popup.");
+            return;
+        }
+
+        GameObject popup = Instantiate(pausePopupPrefab, canvasGO.transform, false);
+
+        RectTransform popupRect = popup.GetComponent<RectTransform>();
+        if (popupRect != null)
+        {
+            popupRect.anchorMin = Vector2.zero;
+            popupRect.anchorMax = Vector2.one;
+            popupRect.offsetMin = Vector2.zero;
+            popupRect.offsetMax = Vector2.zero;
+        }
+
+        Debug.Log("[GameManager] Pause popup instantiated under " + pauseCanvasName + ".");
     }
 
     /// <summary>

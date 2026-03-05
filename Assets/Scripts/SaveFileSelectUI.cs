@@ -200,6 +200,6 @@ public class SaveFileSelectUI : MonoBehaviour
     /// <summary>TEMPORARY: Loads Boss Select Screen. Wire a button to this to skip save/load flow. Remove when done testing.</summary>
     public void TempGoToBossSelect()
     {
-        SceneManager.LoadScene("Boss Select Screen");
+        ScreenFader.LoadScene("Boss Select Screen");
     }
 }

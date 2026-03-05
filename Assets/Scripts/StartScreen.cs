@@ -8,7 +8,7 @@ public class StartScreen : MonoBehaviour
     /// </summary>
     public void NewGame()
     {
-        SceneManager.LoadScene("Start Menu screen");
+        ScreenFader.LoadScene("Start Menu screen");
     }
 
    

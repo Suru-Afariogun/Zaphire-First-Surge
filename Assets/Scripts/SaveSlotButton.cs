@@ -21,7 +21,7 @@ public class SaveSlotButton : MonoBehaviour
         if (tempSkipToBossSelect)
         {
             Debug.Log("Loading Boss Select Screen...");
-            SceneManager.LoadScene("Boss Select Screen");
+            ScreenFader.LoadScene("Boss Select Screen");
             return;
         }
         var ui = FindFirstObjectByType<SaveFileSelectUI>();

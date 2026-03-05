@@ -95,7 +95,7 @@ public class SaveFileSelectManager : MonoBehaviour
         GameManager.Instance.currentLives = GameManager.DefaultLives;
         GameManager.Instance.currentSceneName = "";
         GameManager.Instance.ClearBeatenBossesThisSession();
-        SceneManager.LoadScene("Boss Select Screen");
+        ScreenFader.LoadScene("Boss Select Screen");
     }
 
     /// <summary>
@@ -111,7 +111,7 @@ public class SaveFileSelectManager : MonoBehaviour
         GameManager.Instance.currentSceneName = bossSelectScene;
         GameManager.Instance.ClearBeatenBossesThisSession();
         GameManager.Instance.SaveFullProgressToSlot(saveFileName);
-        SceneManager.LoadScene(bossSelectScene);
+        ScreenFader.LoadScene(bossSelectScene);
     }
 
     /// <summary>
@@ -128,7 +128,7 @@ public class SaveFileSelectManager : MonoBehaviour
             GameManager.Instance.LoadSaveFileState(saveFileName);
             GameManager.Instance.currentSceneName = scene;
         }
-        SceneManager.LoadScene(scene);
+        ScreenFader.LoadScene(scene);
         return true;
     }
 
@@ -150,6 +150,6 @@ public class SaveFileSelectManager : MonoBehaviour
     /// </summary>
     public void LoadSaveFileSelectScene()
     {
-        SceneManager.LoadScene("Save File Select Screen");
+        ScreenFader.LoadScene("Save File Select Screen");
     }
 }

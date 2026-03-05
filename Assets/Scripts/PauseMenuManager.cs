@@ -55,16 +55,16 @@
 
 
 using UnityEngine;
-using UnityEngine.InputSystem;
 
+/// <summary>
+/// Legacy PauseMenuManager. Currently unused; kept only so you can restore
+/// the old global pause-prefab system later if you want.
+/// Pause is now driven by PlayerController (CombatStyleMenu button) +
+/// GameManager-spawned PausePopupUI / PauseMenu.
+/// </summary>
 public class PauseMenuManager : MonoBehaviour
 {
     public static PauseMenuManager Instance;
-    public GameObject pauseMenuPrefab;
-    private GameObject pauseMenuInstance;
-
-      private GlobalControls.cs.GlobalControls controls;
-      private PauseMenu pauseMenu;
 
     void Awake()
     {
@@ -75,35 +75,6 @@ public class PauseMenuManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        controls = new GlobalControls.cs.GlobalControls();
-        controls.UI.Pause.performed += ctx => TogglePause();
-
-        if (pauseMenuPrefab != null && pauseMenuInstance == null)
-        {
-            pauseMenuInstance = Instantiate(pauseMenuPrefab);
-            pauseMenu = pauseMenuInstance.GetComponent<PauseMenu>();
-            pauseMenuInstance.SetActive(false);
-            DontDestroyOnLoad(pauseMenuInstance);
-        }
+        // Intentionally left blank.
     }
-
-    void OnEnable() { if (controls != null) controls.UI.Enable(); }
-    void OnDisable() { if (controls != null) controls.UI.Disable(); }
-
-    public void TogglePause()
-    {
-        if (pauseMenuInstance == null || pauseMenu == null) return;
-
-        if (PauseMenu.isPaused)
-        {
-            pauseMenu.Resume();
-            pauseMenuInstance.SetActive(false);
-        }
-        else
-        {
-            pauseMenuInstance.SetActive(true);
-            pauseMenu.Pause();
-        }
-}
 }

@@ -5,16 +5,13 @@ using TMPro;
 using UnityEngine.UI;
 
 /// <summary>
-/// Handles the Game Over popup:
-/// - Shows "Game oVer, will you like to continue." and current lives (X/3)
-/// - If lives > 0, player can Continue: player respawns at the PlayerSpawner, boss health is preserved
-/// - If lives == 0, Continue is disabled; only Return to Boss Select is allowed
-/// While the popup is visible, the game is paused (Time.timeScale = 0) until the player decides.
+/// Handles the Game Over popup. The prefab (no Canvas) is spawned by GameManager under the scene's "Game Over Canvas".
+/// Shows lives (X/3) and boss health; if lives > 0, Continue respawns at PlayerSpawner; else Return to Boss Select. Game is paused while visible.
 /// </summary>
 public class GameOverPopupUI : MonoBehaviour
 {
     [Header("UI References")]
-    [Tooltip("Root panel of the Game Over popup.")]
+    [Tooltip("Panel to show/hide. Leave empty if this script is on the panel itself — we'll use CanvasGroup to hide so the script stays active.")]
     public GameObject rootPanel;
 
     [Tooltip("TextMeshPro element showing current lives (e.g., \"2/3\").")]
@@ -29,6 +26,13 @@ public class GameOverPopupUI : MonoBehaviour
     [Tooltip("Button that returns to the Boss Select screen.")]
     public Button returnToBossSelectButton;
 
+    [Header("Dim Background")]
+    [Tooltip("Optional full-screen Image behind the popup to darken the game while the popup is visible.")]
+    public Image dimBackgroundImage;
+    [Range(0f, 1f)]
+    [Tooltip("Alpha to use for the dim background when the popup is visible.")]
+    public float dimAlpha = 0.6f;
+
     [Header("Scene Names")]
     [Tooltip("Name of the Boss Select scene.")]
     public string bossSelectSceneName = "Boss Select Screen";
@@ -36,16 +40,29 @@ public class GameOverPopupUI : MonoBehaviour
     private bool _subscribed;
     private PlayerSpawner _spawner;
     private BubbleBlumBoss _boss;
+    private CanvasGroup _canvasGroupForHide;
+    private bool _useCanvasGroupToHide;
 
     void Start()
     {
-        // Only hide the root panel if it's not the same GameObject this script is on.
-        // If we disable our own GameObject, Update will never run and the death event will never be subscribed.
+        // Hide on start. Either hide a child panel (rootPanel) or hide this object via CanvasGroup so this script stays active.
         if (rootPanel != null && rootPanel != gameObject)
+        {
             rootPanel.SetActive(false);
+        }
+        else
+        {
+            _canvasGroupForHide = GetComponent<CanvasGroup>();
+            if (_canvasGroupForHide == null)
+                _canvasGroupForHide = gameObject.AddComponent<CanvasGroup>();
+            _canvasGroupForHide.alpha = 0f;
+            _canvasGroupForHide.blocksRaycasts = false;
+            _canvasGroupForHide.interactable = false;
+            _useCanvasGroupToHide = true;
+        }
 
-        _spawner = FindObjectOfType<PlayerSpawner>();
-        _boss = FindObjectOfType<BubbleBlumBoss>();
+        _spawner = Object.FindFirstObjectByType<PlayerSpawner>();
+        _boss = Object.FindFirstObjectByType<BubbleBlumBoss>();
 
         // Wire buttons
         if (continueButton != null)
@@ -77,13 +94,11 @@ public class GameOverPopupUI : MonoBehaviour
 
         // Pause the game while the popup is active
         Time.timeScale = 0f;
-        PauseMenu.isPaused = true;
 
         UpdateLivesUI();
         UpdateBossHealthUI();
 
-        if (rootPanel != null)
-            rootPanel.SetActive(true);
+        SetPopupVisible(true);
 
         // Select the appropriate button
         if (EventSystem.current != null)
@@ -92,6 +107,26 @@ public class GameOverPopupUI : MonoBehaviour
                 EventSystem.current.SetSelectedGameObject(continueButton.gameObject);
             else if (returnToBossSelectButton != null)
                 EventSystem.current.SetSelectedGameObject(returnToBossSelectButton.gameObject);
+        }
+    }
+
+    void SetPopupVisible(bool visible)
+    {
+        if (_useCanvasGroupToHide && _canvasGroupForHide != null)
+        {
+            _canvasGroupForHide.alpha = visible ? 1f : 0f;
+            _canvasGroupForHide.blocksRaycasts = visible;
+            _canvasGroupForHide.interactable = visible;
+        }
+        else if (rootPanel != null)
+            rootPanel.SetActive(visible);
+
+        if (dimBackgroundImage != null)
+        {
+            var c = dimBackgroundImage.color;
+            c.a = visible ? dimAlpha : 0f;
+            dimBackgroundImage.color = c;
+            dimBackgroundImage.gameObject.SetActive(visible);
         }
     }
 
@@ -112,7 +147,7 @@ public class GameOverPopupUI : MonoBehaviour
         if (bossHealthText == null) return;
 
         if (_boss == null)
-            _boss = FindObjectOfType<BubbleBlumBoss>();
+            _boss = Object.FindFirstObjectByType<BubbleBlumBoss>();
         if (_boss == null)
         {
             bossHealthText.text = "";
@@ -131,10 +166,8 @@ public class GameOverPopupUI : MonoBehaviour
 
         // Unpause
         Time.timeScale = 1f;
-        PauseMenu.isPaused = false;
 
-        if (rootPanel != null)
-            rootPanel.SetActive(false);
+        SetPopupVisible(false);
 
         // Respawn player at the spawner's position, preserving boss state
         RespawnPlayer();
@@ -164,17 +197,15 @@ public class GameOverPopupUI : MonoBehaviour
     {
         // Unpause
         Time.timeScale = 1f;
-        PauseMenu.isPaused = false;
 
-        if (rootPanel != null)
-            rootPanel.SetActive(false);
+        SetPopupVisible(false);
 
         // Reset lives for next attempts
         if (GameManager.Instance != null)
             GameManager.Instance.currentLives = GameManager.DefaultLives;
 
         if (!string.IsNullOrEmpty(bossSelectSceneName))
-            SceneManager.LoadScene(bossSelectSceneName);
+            ScreenFader.LoadScene(bossSelectSceneName);
     }
 }
 

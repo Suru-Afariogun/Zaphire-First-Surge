@@ -136,7 +136,7 @@ public class MenuInputController : MonoBehaviour
 
         if (!string.IsNullOrEmpty(backSceneName))
         {
-            SceneManager.LoadScene(backSceneName);
+            ScreenFader.LoadScene(backSceneName);
         }
     }
 

@@ -32,6 +32,7 @@ public class CoreManager : MonoBehaviour
 
     private int corePoints = 0;
     private int powerLevel = 0;
+    private int _shakingCoreIndex = -1;
 
     private void Awake()
     {
@@ -144,14 +145,30 @@ public class CoreManager : MonoBehaviour
     /// </summary>
     public void SetActiveCoreShaking(bool shaking)
     {
-        int chargedCores = GetChargedCores();
-        if (chargedCores <= 0) return;
+        if (shaking)
+        {
+            int chargedCores = GetChargedCores();
+            if (chargedCores <= 0) return;
 
-        int activeIndex = chargedCores - 1; // rightmost charged core
-        if (activeIndex < 0 || activeIndex >= cores.Length) return;
+            int activeIndex = chargedCores - 1; // rightmost charged core
+            if (activeIndex < 0 || activeIndex >= cores.Length) return;
 
-        var coreUI = cores[activeIndex];
-        if (coreUI != null)
-            coreUI.SetShaking(shaking, coreShakeAmplitude, coreShakeFrequency);
+            var coreUI = cores[activeIndex];
+            if (coreUI != null)
+            {
+                coreUI.SetShaking(true, coreShakeAmplitude, coreShakeFrequency);
+                _shakingCoreIndex = activeIndex;
+            }
+        }
+        else
+        {
+            if (_shakingCoreIndex >= 0 && _shakingCoreIndex < cores.Length)
+            {
+                var coreUI = cores[_shakingCoreIndex];
+                if (coreUI != null)
+                    coreUI.SetShaking(false, coreShakeAmplitude, coreShakeFrequency);
+            }
+            _shakingCoreIndex = -1;
+        }
     }
 }

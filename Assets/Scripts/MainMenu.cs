@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void NewGame()
     {
-        SceneManager.LoadScene("Save File Select Screen");
+        ScreenFader.LoadScene("Save File Select Screen");
     }
 
     /// <summary>
@@ -34,7 +34,7 @@ public class MainMenu : MonoBehaviour
         if (SaveFileSelectManager.Instance != null)
             SaveFileSelectManager.Instance.LoadSaveFileSelectScene();
         else
-            SceneManager.LoadScene("Save File Select Screen");
+            ScreenFader.LoadScene("Save File Select Screen");
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void OpenOptions()
     {
-        SceneManager.LoadScene("Options");
+        ScreenFader.LoadScene("Options");
     }
 
     /// <summary>
@@ -53,7 +53,7 @@ public class MainMenu : MonoBehaviour
         if (SaveFileSelectManager.Instance != null)
             SaveFileSelectManager.Instance.LoadSaveFileSelectScene();
         else
-            SceneManager.LoadScene("Save File Select Screen");
+            ScreenFader.LoadScene("Save File Select Screen");
     }
 
     // public void QuitGame() => Application.Quit();

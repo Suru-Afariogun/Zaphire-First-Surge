@@ -122,6 +122,12 @@ public class BubbleBlumBoss : MonoBehaviour
     [Tooltip("Number of player projectiles that must hit the bubble shield to break it early.")]
     public int bubbleShieldHitsToBreak = 6;
 
+    [Header("Defeat / End-of-demo")]
+    [Tooltip("Name of the scene to load after this boss is defeated (e.g., Thank You For Playing screen). Leave empty to stay in the fight scene.")]
+    public string thankYouSceneName = "Thank You Screen";
+    [Tooltip("Delay in seconds after the boss dies before loading the thank-you scene.")]
+    public float thankYouSceneDelay = 2f;
+
     // internal
     private Transform player;
     private Rigidbody2D rb;
@@ -1013,7 +1019,19 @@ public class BubbleBlumBoss : MonoBehaviour
         }
         rb.linearVelocity = Vector2.zero;
         Debug.Log("Boss died!");
+        StartCoroutine(HandleBossDefeatSequence());
         Destroy(gameObject, 1f);
+    }
+
+    IEnumerator HandleBossDefeatSequence()
+    {
+        if (thankYouSceneDelay > 0f)
+            yield return new WaitForSeconds(thankYouSceneDelay);
+
+        if (!string.IsNullOrEmpty(thankYouSceneName))
+        {
+            ScreenFader.LoadScene(thankYouSceneName);
+        }
     }
 
     // -----------------------------
